@@ -1,0 +1,11 @@
+question_id,question,expected_chunk_id,query_type,note
+Q01,Quy định 73/2016/NĐ-CP Điều 115 về hiệu lực thi hành,112025_c116,EXACT_KEYWORD,Exact document code & article number
+Q02,Thông tư 01/2014/TT-NHNN Điều 50 về phương tiện vận chuyển,44209_c051,EXACT_KEYWORD,Exact Circular number & article
+Q03,Luật Các tổ chức tín dụng số 32/2024/QH15 Điều 136 quy định về giới hạn cấp tín dụng,166170_c137,EXACT_KEYWORD,Exact Law code & limit article
+Q04,Nghị định 46/2023/NĐ-CP Điều 122 quy định điều khoản thi hành,163441_c123,EXACT_KEYWORD,Decree execution clause
+Q05,Quy trình kiểm soát nội bộ đối với hoạt động cấp tín dụng của hợp tác xã,186888_c018,SEMANTIC,Semantic credit control query
+Q06,Thẩm quyền quyết định cho vay và lãi suất vay đặc biệt của các tổ chức tín dụng,166170_c194,SEMANTIC,Semantic special loan decision query
+Q07,Ai có thẩm quyền xử phạt vi phạm hành chính trong lĩnh vực chứng khoán,f69936f0-6937-11f1-a48d-29bc6b0fd706_c052,SEMANTIC,Semantic sanction authority query
+Q08,Lực lượng tham gia vận chuyển và trách nhiệm người áp tải tiền mặt theo Thông tư 01/2014/TT-NHNN,44209_c056,MIXED,Combined legal code and operational semantics
+Q09,Giấy ủy quyền vận chuyển tài sản quý theo quy định Thông tư 01/2014/TT-NHNN,44209_c050,MIXED,Combined legal code and authorization document
+Q10,Trách nhiệm của Ngân hàng Nhà nước Khu vực trong việc cấp Giấy phép quỹ tín dụng nhân dân theo Thông tư 01/2025/TT-NHNN,177271_c019,MIXED,Combined agency responsibility query

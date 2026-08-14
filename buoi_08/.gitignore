@@ -1,0 +1,11 @@
+# Buổi 08 local artifacts
+.env
+__pycache__/
+*.pyc
+storage/chroma/
+storage/huggingface/
+reports/*.json
+.streamlit/
+# keep .gitkeep files if present
+!reports/.gitkeep
+!storage/.gitkeep

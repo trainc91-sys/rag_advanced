@@ -1,0 +1,26 @@
+[
+  {
+    "chunk_id": "c1",
+    "strategy": "hierarchical",
+    "source": "Văn bản A",
+    "page_start": 1,
+    "page_end": 1,
+    "text": "Nội dung điều 1 về điều kiện cấp phép hoạt động."
+  },
+  {
+    "chunk_id": "c2",
+    "strategy": "hierarchical",
+    "source": "Văn bản A",
+    "page_start": 2,
+    "page_end": 2,
+    "text": "Nội dung điều 2 về trách nhiệm báo cáo hàng năm."
+  },
+  {
+    "chunk_id": "c3",
+    "strategy": "semantic",
+    "source": "Văn bản B",
+    "page_start": 1,
+    "page_end": 1,
+    "text": "Thông tin tổng quát về pháp lý."
+  }
+]

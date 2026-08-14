@@ -1,0 +1,171 @@
+﻿python : Unable to retrieve routing information
+At line:1 char:96
++ ... s\kb+hops'; python .\load_to_neo4j.py --uri neo4j://127.0.0.1:7687 -- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Unable to retrieve routing inform 
+   ation:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  | ExceptionGroup: All routing table requests failed (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Pytho
+n\Python314\Lib\site-packages\neo4j\_async_compat\network\_bolt_socket.py", 
+line 553, in _connect_secure
+    |     s.connect(resolved_address)
+    |     ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+    | ConnectionRefusedError: [WinError 10061] No connection could be made 
+because the target machine actively refused it
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Pytho
+n\Python314\Lib\site-packages\neo4j\_sync\io\_bolt_socket.py", line 329, in 
+connect
+    |     s = cls._connect_secure(
+    |         resolved_address,
+    |     ...<3 lines>...
+    |         ssl_context,
+    |     )
+    |   File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Pytho
+n\Python314\Lib\site-packages\neo4j\_async_compat\network\_bolt_socket.py", 
+line 563, in _connect_secure
+    |     raise ServiceUnavailable(
+    |     ...<2 lines>...
+    |     ) from error
+    | neo4j.exceptions.ServiceUnavailable: Failed to establish connection to 
+ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No 
+connection could be made because the target machine actively refused it)
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Pytho
+n\Python314\Lib\site-packages\neo4j\_sync\io\_pool.py", line 833, in 
+fetch_routing_table
+    |     new_routing_info = self.fetch_routing_info(
+    |         address,
+    |     ...<4 lines>...
+    |         acquisition_timeout,
+    |     )
+    |   File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Pytho
+n\Python314\Lib\site-packages\neo4j\_sync\io\_pool.py", line 792, in 
+fetch_routing_info
+    |     cx = self._acquire(address, auth, deadline, None)
+    |   File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Pytho
+n\Python314\Lib\site-packages\neo4j\_sync\io\_pool.py", line 418, in _acquire
+    |     return connection_creator()
+    |   File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Pytho
+n\Python314\Lib\site-packages\neo4j\_sync\io\_pool.py", line 231, in 
+connection_creator
+    |     connection = self.opener(
+    |         address, auth or self.pool_config.auth, deadline
+    |     )
+    |   File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Pytho
+n\Python314\Lib\site-packages\neo4j\_sync\io\_pool.py", line 711, in opener
+    |     return Bolt.open(
+    |            ~~~~~~~~~^
+    |         addr,
+    |         ^^^^^
+    |     ...<3 lines>...
+    |         pool_config=pool_config,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^
+    |     )
+    |     ^
+    |   File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Pytho
+n\Python314\Lib\site-packages\neo4j\_sync\io\_bolt.py", line 366, in open
+    |     s, protocol_version = BoltSocket.connect(
+    |                           ~~~~~~~~~~~~~~~~~~^
+    |         address,
+    |         ^^^^^^^^
+    |     ...<4 lines>...
+    |         keep_alive=pool_config.keep_alive,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     )
+    |     ^
+    |   File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Pytho
+n\Python314\Lib\site-packages\neo4j\_sync\io\_bolt_socket.py", line 380, in 
+connect
+    |     raise ServiceUnavailable(
+    |     ...<2 lines>...
+    |     ) from errors[0]
+    | neo4j.exceptions.ServiceUnavailable: Couldn't connect to 127.0.0.1:7687 
+(resolved to ('127.0.0.1:7687',)):
+    | Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 
+7687)) (reason [WinError 10061] No connection could be made because the target 
+machine actively refused it)
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\RAG\rag_advanced\buoi_10\graph_rag_labs\graph_rag_labs\kb+hops\load_
+to_neo4j.py", line 236, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "D:\RAG\rag_advanced\buoi_10\graph_rag_labs\graph_rag_labs\kb+hops\load_
+to_neo4j.py", line 222, in main
+    load_to_neo4j(
+    ~~~~~~~~~~~~~^
+        uri=args.uri,
+        ^^^^^^^^^^^^^
+    ...<6 lines>...
+        create_database=args.create_database,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\RAG\rag_advanced\buoi_10\graph_rag_labs\graph_rag_labs\kb+hops\load_
+to_neo4j.py", line 148, in load_to_neo4j
+    ensure_database_exists(driver, database, create_database)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG\rag_advanced\buoi_10\graph_rag_labs\graph_rag_labs\kb+hops\load_
+to_neo4j.py", line 114, in ensure_database_exists
+    result = sys_session.run("SHOW DATABASES YIELD name WHERE name = $name", 
+name=database)
+  File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Python\Pyth
+on314\Lib\site-packages\neo4j\_sync\work\session.py", line 318, in run
+    self._connect(self._config.default_access_mode)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Python\Pyth
+on314\Lib\site-packages\neo4j\_sync\work\session.py", line 128, in _connect
+    super()._connect(
+    ~~~~~~~~~~~~~~~~^
+        access_mode, auth=self._config.auth, **acquire_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Python\Pyth
+on314\Lib\site-packages\neo4j\_sync\work\workspace.py", line 181, in _connect
+    self._connection = self._pool.acquire(**acquire_kwargs_)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Python\Pyth
+on314\Lib\site-packages\neo4j\_sync\io\_pool.py", line 1216, in acquire
+    self.ensure_routing_table_is_fresh(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        access_mode=access_mode,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+        ),
+        ^^
+    )
+    ^
+  File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Python\Pyth
+on314\Lib\site-packages\neo4j\_sync\io\_pool.py", line 1150, in 
+ensure_routing_table_is_fresh
+    self.update_routing_table(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        database=database_request,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        database_callback=wrapped_database_callback,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator.7500-WS000094\AppData\Local\Programs\Python\Pyth
+on314\Lib\site-packages\neo4j\_sync\io\_pool.py", line 1076, in 
+update_routing_table
+    raise ServiceUnavailable(
+        "Unable to retrieve routing information"
+    ) from e
+neo4j.exceptions.ServiceUnavailable: Unable to retrieve routing information

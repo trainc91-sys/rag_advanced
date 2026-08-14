@@ -1,0 +1,212 @@
+﻿document_id,so_ky_hieu,entity,entity_type,source,method,confidence,evidence
+166170,32/2024/QH15,Quốc hội,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Quốc hội
+166170,32/2024/QH15,Vương Đình Huệ,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Vương Đình Huệ
+112025,73/2016/NĐ-CP,Chính phủ,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Chính phủ
+112025,73/2016/NĐ-CP,Nguyễn Xuân Phúc,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Nguyễn Xuân Phúc
+112025,73/2016/NĐ-CP,Chính phủ,CoQuan,content_clean,gemini,0.95,CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+112025,73/2016/NĐ-CP,Bộ Tài chính,CoQuan,content_clean,gemini,0.9,Theo đề nghị của Bộ trưởng Bộ Tài chính;
+112025,73/2016/NĐ-CP,Doanh nghiệp bảo hiểm,DoiTuongApDung,content_clean,gemini,0.92,Nghị định này áp dụng đối với: a) Doanh nghiệp bảo hiểm;
+112025,73/2016/NĐ-CP,Chi nhánh nước ngoài,DoiTuongApDung,content_clean,gemini,0.9,b) Chi nhánh nước ngoài;
+112025,73/2016/NĐ-CP,Doanh nghiệp môi giới bảo hiểm,DoiTuongApDung,content_clean,gemini,0.92,c) Doanh nghiệp môi giới bảo hiểm
+112025,73/2016/NĐ-CP,đại lý bảo hiểm,DoiTuongApDung,content_clean,gemini,0.92,đại lý bảo hiểm;
+112025,73/2016/NĐ-CP,"Các tổ chức, cá nhân khác có liên quan",DoiTuongApDung,content_clean,gemini,0.88,"d) Các tổ chức, cá nhân khác có liên quan."
+112025,73/2016/NĐ-CP,Bảo hiểm,LinhVuc,content_clean,gemini,0.95,tăng cường vai trò tự quản trong lĩnh vực bảo hiểm
+38128,37/2014/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+38128,37/2014/TT-NHNN,Đào Minh Tú,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đào Minh Tú
+38128,37/2014/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,content_clean,gemini,0.95,NGÂN HÀNG NHÀ NƯỚC VIỆT NAM CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+38128,37/2014/TT-NHNN,Đào Minh Tú,NguoiKy,content_clean,gemini,0.9,Người ký (Gốc): Đào Minh Tú
+38128,37/2014/TT-NHNN,Các đơn vị có liên quan thuộc Ngân hàng Nhà nước,DoiTuongApDung,content_clean,gemini,0.92,1. Các đơn vị có liên quan thuộc Ngân hàng Nhà nước.
+38128,37/2014/TT-NHNN,Nhà máy in tiền Quốc gia,DoiTuongApDung,content_clean,gemini,0.92,2. Nhà máy in tiền Quốc gia.
+38128,37/2014/TT-NHNN,"Tổ chức, cá nhân khác có liên quan đến công việc thiết kế mẫu tiền, chế tạo bản in, khuôn đúc và in, đúc tiền",DoiTuongApDung,content_clean,gemini,0.92,"3. Tổ chức, cá nhân khác có liên quan đến công việc thiết kế mẫu tiền, chế tạo bản in, khuôn đúc và in, đúc tiền."
+38128,37/2014/TT-NHNN,Phát hành và kho quỹ,LinhVuc,content_clean,gemini,0.88,Lĩnh vực (Gốc): Phát hành và kho quỹ
+26750,67/2011/QH12,Quốc hội,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Quốc hội
+26750,67/2011/QH12,Nguyễn Phú Trọng,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Nguyễn Phú Trọng
+26750,67/2011/QH12,Quốc hội,CoQuan,content_clean,gemini,0.95,Quốc hội ban hành Luật Kiểm toán độc lập
+26750,67/2011/QH12,kiểm toán viên,DoiTuongApDung,content_clean,gemini,0.92,"Luật này áp dụng đối với kiểm toán viên, kiểm toán viên hành nghề, doanh nghiệp kiểm toán, chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam, đơn vị được kiểm toán, tổ chức nghề nghiệp về kiểm toán và tổ chức, cá nhân khác có liên quan đến hoạt động kiểm toán độc lập."
+26750,67/2011/QH12,kiểm toán viên hành nghề,DoiTuongApDung,content_clean,gemini,0.92,"Luật này áp dụng đối với kiểm toán viên, kiểm toán viên hành nghề, doanh nghiệp kiểm toán, chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam, đơn vị được kiểm toán, tổ chức nghề nghiệp về kiểm toán và tổ chức, cá nhân khác có liên quan đến hoạt động kiểm toán độc lập."
+26750,67/2011/QH12,doanh nghiệp kiểm toán,DoiTuongApDung,content_clean,gemini,0.92,"Luật này áp dụng đối với kiểm toán viên, kiểm toán viên hành nghề, doanh nghiệp kiểm toán, chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam, đơn vị được kiểm toán, tổ chức nghề nghiệp về kiểm toán và tổ chức, cá nhân khác có liên quan đến hoạt động kiểm toán độc lập."
+26750,67/2011/QH12,chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam,DoiTuongApDung,content_clean,gemini,0.92,"Luật này áp dụng đối với kiểm toán viên, kiểm toán viên hành nghề, doanh nghiệp kiểm toán, chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam, đơn vị được kiểm toán, tổ chức nghề nghiệp về kiểm toán và tổ chức, cá nhân khác có liên quan đến hoạt động kiểm toán độc lập."
+26750,67/2011/QH12,đơn vị được kiểm toán,DoiTuongApDung,content_clean,gemini,0.92,"Luật này áp dụng đối với kiểm toán viên, kiểm toán viên hành nghề, doanh nghiệp kiểm toán, chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam, đơn vị được kiểm toán, tổ chức nghề nghiệp về kiểm toán và tổ chức, cá nhân khác có liên quan đến hoạt động kiểm toán độc lập."
+26750,67/2011/QH12,tổ chức nghề nghiệp về kiểm toán,DoiTuongApDung,content_clean,gemini,0.92,"Luật này áp dụng đối với kiểm toán viên, kiểm toán viên hành nghề, doanh nghiệp kiểm toán, chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam, đơn vị được kiểm toán, tổ chức nghề nghiệp về kiểm toán và tổ chức, cá nhân khác có liên quan đến hoạt động kiểm toán độc lập."
+26750,67/2011/QH12,"tổ chức, cá nhân khác có liên quan đến hoạt động kiểm toán độc lập",DoiTuongApDung,content_clean,gemini,0.9,"Luật này áp dụng đối với kiểm toán viên, kiểm toán viên hành nghề, doanh nghiệp kiểm toán, chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam, đơn vị được kiểm toán, tổ chức nghề nghiệp về kiểm toán và tổ chức, cá nhân khác có liên quan đến hoạt động kiểm toán độc lập."
+26750,67/2011/QH12,Kiểm toán độc lập,LinhVuc,content_clean,gemini,0.95,Luật Kiểm toán độc lập
+163441,46/2023/NĐ-CP,Chính phủ,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Chính phủ
+163441,46/2023/NĐ-CP,Lê Minh Khái,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Lê Minh Khái
+163441,46/2023/NĐ-CP,Chính phủ,CoQuan,content_clean,gemini,0.95,CHÍNH PHỦ _________ CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM
+163441,46/2023/NĐ-CP,Doanh nghiệp bảo hiểm phi nhân thọ,DoiTuongApDung,content_clean,gemini,0.92,"Doanh nghiệp bảo hiểm phi nhân thọ, doanh nghiệp bảo hiểm nhân thọ, doanh nghiệp bảo hiểm sức khỏe (sau đây gọi là doanh nghiệp bảo hiểm), doanh nghiệp tái bảo hiểm, đại lý bảo hiểm, doanh nghiệp môi giới bảo hiểm, tổ chức, cá nhân cung cấp dịch vụ phụ trợ bảo hiểm, tổ chức tương hỗ cung cấp bảo hiểm vi mô."
+163441,46/2023/NĐ-CP,Doanh nghiệp bảo hiểm nhân thọ,DoiTuongApDung,content_clean,gemini,0.92,"Doanh nghiệp bảo hiểm phi nhân thọ, doanh nghiệp bảo hiểm nhân thọ, doanh nghiệp bảo hiểm sức khỏe (sau đây gọi là doanh nghiệp bảo hiểm), doanh nghiệp tái bảo hiểm, đại lý bảo hiểm, doanh nghiệp môi giới bảo hiểm, tổ chức, cá nhân cung cấp dịch vụ phụ trợ bảo hiểm, tổ chức tương hỗ cung cấp bảo hiểm vi mô."
+163441,46/2023/NĐ-CP,Doanh nghiệp bảo hiểm sức khỏe,DoiTuongApDung,content_clean,gemini,0.92,"Doanh nghiệp bảo hiểm phi nhân thọ, doanh nghiệp bảo hiểm nhân thọ, doanh nghiệp bảo hiểm sức khỏe (sau đây gọi là doanh nghiệp bảo hiểm), doanh nghiệp tái bảo hiểm, đại lý bảo hiểm, doanh nghiệp môi giới bảo hiểm, tổ chức, cá nhân cung cấp dịch vụ phụ trợ bảo hiểm, tổ chức tương hỗ cung cấp bảo hiểm vi mô."
+163441,46/2023/NĐ-CP,Doanh nghiệp tái bảo hiểm,DoiTuongApDung,content_clean,gemini,0.92,"Doanh nghiệp bảo hiểm phi nhân thọ, doanh nghiệp bảo hiểm nhân thọ, doanh nghiệp bảo hiểm sức khỏe (sau đây gọi là doanh nghiệp bảo hiểm), doanh nghiệp tái bảo hiểm, đại lý bảo hiểm, doanh nghiệp môi giới bảo hiểm, tổ chức, cá nhân cung cấp dịch vụ phụ trợ bảo hiểm, tổ chức tương hỗ cung cấp bảo hiểm vi mô."
+163441,46/2023/NĐ-CP,Đại lý bảo hiểm,DoiTuongApDung,content_clean,gemini,0.92,"Doanh nghiệp bảo hiểm phi nhân thọ, doanh nghiệp bảo hiểm nhân thọ, doanh nghiệp bảo hiểm sức khỏe (sau đây gọi là doanh nghiệp bảo hiểm), doanh nghiệp tái bảo hiểm, đại lý bảo hiểm, doanh nghiệp môi giới bảo hiểm, tổ chức, cá nhân cung cấp dịch vụ phụ trợ bảo hiểm, tổ chức tương hỗ cung cấp bảo hiểm vi mô."
+163441,46/2023/NĐ-CP,Doanh nghiệp môi giới bảo hiểm,DoiTuongApDung,content_clean,gemini,0.92,"Doanh nghiệp bảo hiểm phi nhân thọ, doanh nghiệp bảo hiểm nhân thọ, doanh nghiệp bảo hiểm sức khỏe (sau đây gọi là doanh nghiệp bảo hiểm), doanh nghiệp tái bảo hiểm, đại lý bảo hiểm, doanh nghiệp môi giới bảo hiểm, tổ chức, cá nhân cung cấp dịch vụ phụ trợ bảo hiểm, tổ chức tương hỗ cung cấp bảo hiểm vi mô."
+163441,46/2023/NĐ-CP,"Tổ chức, cá nhân cung cấp dịch vụ phụ trợ bảo hiểm",DoiTuongApDung,content_clean,gemini,0.92,"Doanh nghiệp bảo hiểm phi nhân thọ, doanh nghiệp bảo hiểm nhân thọ, doanh nghiệp bảo hiểm sức khỏe (sau đây gọi là doanh nghiệp bảo hiểm), doanh nghiệp tái bảo hiểm, đại lý bảo hiểm, doanh nghiệp môi giới bảo hiểm, tổ chức, cá nhân cung cấp dịch vụ phụ trợ bảo hiểm, tổ chức tương hỗ cung cấp bảo hiểm vi mô."
+163441,46/2023/NĐ-CP,Tổ chức tương hỗ cung cấp bảo hiểm vi mô,DoiTuongApDung,content_clean,gemini,0.92,"Doanh nghiệp bảo hiểm phi nhân thọ, doanh nghiệp bảo hiểm nhân thọ, doanh nghiệp bảo hiểm sức khỏe (sau đây gọi là doanh nghiệp bảo hiểm), doanh nghiệp tái bảo hiểm, đại lý bảo hiểm, doanh nghiệp môi giới bảo hiểm, tổ chức, cá nhân cung cấp dịch vụ phụ trợ bảo hiểm, tổ chức tương hỗ cung cấp bảo hiểm vi mô."
+163441,46/2023/NĐ-CP,Chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài,DoiTuongApDung,content_clean,gemini,0.92,"Chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài, chi nhánh doanh nghiệp tái bảo hiểm nước ngoài (sau đây gọi là chi nhánh nước ngoài tại Việt Nam)"
+163441,46/2023/NĐ-CP,Chi nhánh doanh nghiệp tái bảo hiểm nước ngoài,DoiTuongApDung,content_clean,gemini,0.92,"Chi nhánh doanh nghiệp bảo hiểm phi nhân thọ nước ngoài, chi nhánh doanh nghiệp tái bảo hiểm nước ngoài (sau đây gọi là chi nhánh nước ngoài tại Việt Nam)"
+163441,46/2023/NĐ-CP,"Văn phòng đại diện của doanh nghiệp bảo hiểm nước ngoài, doanh nghiệp tái bảo hiểm nước ngoài, doanh nghiệp môi giới bảo hiểm nước ngoài, tập đoàn tài chính, bảo hiểm nước ngoài tại Việt Nam",DoiTuongApDung,content_clean,gemini,0.92,"Văn phòng đại diện của doanh nghiệp bảo hiểm nước ngoài, doanh nghiệp tái bảo hiểm nước ngoài, doanh nghiệp môi giới bảo hiểm nước ngoài, tập đoàn tài chính, bảo hiểm nước ngoài tại Việt Nam (sau đây gọi là văn phòng đại diện nước ngoài tại Việt Nam)."
+163441,46/2023/NĐ-CP,"Bên mua bảo hiểm, người được bảo hiểm, người thụ hưởng",DoiTuongApDung,content_clean,gemini,0.92,"Bên mua bảo hiểm, người được bảo hiểm, người thụ hưởng"
+163441,46/2023/NĐ-CP,Cơ quan quản lý nhà nước về hoạt động kinh doanh bảo hiểm,DoiTuongApDung,content_clean,gemini,0.92,Cơ quan quản lý nhà nước về hoạt động kinh doanh bảo hiểm.
+163441,46/2023/NĐ-CP,Tổ chức và cá nhân có liên quan đến hoạt động kinh doanh bảo hiểm,DoiTuongApDung,content_clean,gemini,0.92,Tổ chức và cá nhân có liên quan đến hoạt động kinh doanh bảo hiểm.
+163441,46/2023/NĐ-CP,Bảo hiểm,LinhVuc,content_clean,gemini,0.95,Nghị định quy định chi tiết thi hành một số điều của Luật Kinh doanh bảo hiểm
+146468,156/2020/NĐ-CP,Chính phủ,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Chính phủ
+146468,156/2020/NĐ-CP,Nguyễn Xuân Phúc,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Nguyễn Xuân Phúc
+146468,156/2020/NĐ-CP,Chính phủ,CoQuan,content_clean,gemini,0.95,CHÍNH PHỦ ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+146468,156/2020/NĐ-CP,Bộ Tài chính,CoQuan,content_clean,gemini,0.85,Theo đề nghị của Bộ trưởng Bộ Tài chính.
+146468,156/2020/NĐ-CP,"Tổ chức, cá nhân Việt Nam và tổ chức, cá nhân nước ngoài",DoiTuongApDung,content_clean,gemini,0.92,"Tổ chức, cá nhân Việt Nam và tổ chức, cá nhân nước ngoài (sau đây gọi chung là tổ chức, cá nhân) thực hiện hành vi vi phạm hành chính trong lĩnh vực chứng khoán và thị trường chứng khoán"
+146468,156/2020/NĐ-CP,Công ty đại chúng,DoiTuongApDung,content_clean,gemini,0.9,a) Công ty đại chúng;
+146468,156/2020/NĐ-CP,Doanh nghiệp nhà nước,DoiTuongApDung,content_clean,gemini,0.9,"b) Doanh nghiệp nhà nước, công ty trách nhiệm hữu hạn một thành viên do doanh nghiệp nhà nước nắm giữ 100% vốn điều lệ, đơn vị sự nghiệp công lập cổ phần hóa dưới hình thức chào bán chứng khoán ra công chúng;"
+146468,156/2020/NĐ-CP,Tổ chức phát hành,DoiTuongApDung,content_clean,gemini,0.9,c) Tổ chức phát hành;
+146468,156/2020/NĐ-CP,"Tổ chức niêm yết, tổ chức đăng ký giao dịch",DoiTuongApDung,content_clean,gemini,0.9,"d) Tổ chức niêm yết, tổ chức đăng ký giao dịch; tổ chức tư vấn niêm yết, đăng ký giao dịch;"
+146468,156/2020/NĐ-CP,Tổ chức kiểm toán được chấp thuận,DoiTuongApDung,content_clean,gemini,0.9,đ) Tổ chức kiểm toán được chấp thuận;
+146468,156/2020/NĐ-CP,"Công ty chứng khoán, công ty quản lý quỹ đầu tư chứng khoán",DoiTuongApDung,content_clean,gemini,0.9,"g) Công ty chứng khoán, công ty quản lý quỹ đầu tư chứng khoán, chi nhánh, văn phòng đại diện công ty chứng khoán, công ty quản lý quỹ nước ngoài tại Việt Nam, công ty đầu tư chứng khoán;"
+146468,156/2020/NĐ-CP,Ngân hàng thương mại,DoiTuongApDung,content_clean,gemini,0.88,"k) Ngân hàng thương mại, chi nhán"
+146468,156/2020/NĐ-CP,Chứng khoán và thị trường chứng khoán,LinhVuc,content_clean,gemini,0.95,Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực chứng khoán và thị trường chứng khoán
+168220,27/2024/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+168220,27/2024/TT-NHNN,Đào Minh Tú,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đào Minh Tú
+168220,27/2024/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,content_clean,gemini,0.95,NGÂN HÀNG NHÀ NƯỚC VIỆT NAM --------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+168220,27/2024/TT-NHNN,Đào Minh Tú,NguoiKy,content_clean,gemini,0.9,Người ký (Gốc): Đào Minh Tú
+168220,27/2024/TT-NHNN,Ngân hàng hợp tác xã,DoiTuongApDung,content_clean,gemini,0.95,1. Ngân hàng hợp tác xã.
+168220,27/2024/TT-NHNN,Quỹ tín dụng nhân dân,DoiTuongApDung,content_clean,gemini,0.95,2. Quỹ tín dụng nhân dân.
+168220,27/2024/TT-NHNN,"Tổ chức, cá nhân có liên quan đến phạm vi điều chỉnh quy định tại Điều 1 Thông tư này",DoiTuongApDung,content_clean,gemini,0.92,"3. Tổ chức, cá nhân có liên quan đến phạm vi điều chỉnh quy định tại Điều 1 Thông tư này."
+168220,27/2024/TT-NHNN,"Thanh tra, giám sát ngân hàng",LinhVuc,content_clean,gemini,0.9,"Lĩnh vực (Gốc): Thanh tra, giám sát ngân hàng"
+133858,05/2019/NĐ-CP,Chính phủ,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Chính phủ
+133858,05/2019/NĐ-CP,Nguyễn Xuân Phúc,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Nguyễn Xuân Phúc
+133858,05/2019/NĐ-CP,Chính phủ,CoQuan,content_clean,gemini,0.95,Chính phủ ban hành Nghị định về kiểm toán nội bộ.
+133858,05/2019/NĐ-CP,Bộ Tài chính,CoQuan,content_clean,gemini,0.92,Theo đề nghị của Bộ trưởng Bộ Tài chính;
+133858,05/2019/NĐ-CP,Nguyễn Xuân Phúc,NguoiKy,content_clean,gemini,0.9,Người ký (Gốc): Nguyễn Xuân Phúc
+133858,05/2019/NĐ-CP,"Các bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ",DoiTuongApDung,content_clean,gemini,0.93,"a) Các bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ;"
+133858,05/2019/NĐ-CP,"Ủy ban nhân dân các tỉnh, thành phố trực thuộc trung ương",DoiTuongApDung,content_clean,gemini,0.93,"b) Ủy ban nhân dân các tỉnh, thành phố trực thuộc trung ương;"
+133858,05/2019/NĐ-CP,Các đơn vị sự nghiệp công lập,DoiTuongApDung,content_clean,gemini,0.93,c) Các đơn vị sự nghiệp công lập;
+133858,05/2019/NĐ-CP,Các doanh nghiệp,DoiTuongApDung,content_clean,gemini,0.93,d) Các doanh nghiệp;
+133858,05/2019/NĐ-CP,Tổ chức tín dụng,DoiTuongApDung,content_clean,gemini,0.88,Công tác kiểm toán nội bộ của tổ chức tín dụng
+133858,05/2019/NĐ-CP,Kiểm toán nội bộ,LinhVuc,content_clean,gemini,0.92,NGHỊ ĐỊNH Về kiểm toán nội bộ
+169221,43/2024/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+169221,43/2024/TT-NHNN,Phạm Thanh Hà,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Phạm Thanh Hà
+169221,43/2024/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,content_clean,gemini,0.95,NGÂN HÀNG NHÀ NƯỚC VIỆT NAM
+169221,43/2024/TT-NHNN,Phạm Thanh Hà,NguoiKy,content_clean,gemini,0.9,Người ký (Gốc): Phạm Thanh Hà
+169221,43/2024/TT-NHNN,Cục Quản lý dự trữ ngoại hối nhà nước,DoiTuongApDung,content_clean,gemini,0.88,"Cục Quản lý dự trữ ngoại hối nhà nước chủ trì, phối hợp với Vụ Chính sách tiền tệ, Vụ Quản lý ngoại hối và Vụ Dự báo, thống kê"
+169221,43/2024/TT-NHNN,Vụ Chính sách tiền tệ,DoiTuongApDung,content_clean,gemini,0.85,phối hợp với Vụ Chính sách tiền tệ
+169221,43/2024/TT-NHNN,Vụ Quản lý ngoại hối,DoiTuongApDung,content_clean,gemini,0.85,Vụ Quản lý ngoại hối
+169221,43/2024/TT-NHNN,"Vụ Dự báo, thống kê",DoiTuongApDung,content_clean,gemini,0.85,"Vụ Dự báo, thống kê"
+169221,43/2024/TT-NHNN,đối tác đầu tư,DoiTuongApDung,content_clean,gemini,0.8,"tiêu chuẩn lựa chọn đối tác đầu tư bao gồm: tiêu chuẩn lựa chọn đối tác gửi ngoại tệ và vàng; đối tác phát hành chứng khoán, giấy tờ có giá bằng ngoại tệ; đối tác giao dịch ngoại tệ và vàng; đối tác giao dịch chứng khoán, giấy tờ có giá; đối tác lưu ký chứng khoán, giấy tờ có giá và vàng; đối tác thực hiện ủy thác đầu tư"
+169221,43/2024/TT-NHNN,Quản lý ngoại hối,LinhVuc,content_clean,gemini,0.92,Lĩnh vực (Gốc): Quản lý ngoại hối
+95652,135/2015/NĐ-CP,Chính phủ,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Chính phủ
+95652,135/2015/NĐ-CP,Nguyễn Tấn Dũng,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Nguyễn Tấn Dũng
+95652,135/2015/NĐ-CP,Chính phủ,CoQuan,content_clean,gemini,0.95,CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+95652,135/2015/NĐ-CP,Nguyễn Tấn Dũng,NguoiKy,content_clean,gemini,0.9,Người ký (Gốc): Nguyễn Tấn Dũng
+95652,135/2015/NĐ-CP,Tổ chức kinh tế,DoiTuongApDung,content_clean,gemini,0.92,Tổ chức kinh tế theo quy định tại Khoản 16 Điều 3 Luật Đầu tư
+95652,135/2015/NĐ-CP,Cá nhân có quốc tịch Việt Nam,DoiTuongApDung,content_clean,gemini,0.92,Cá nhân có quốc tịch Việt Nam thuộc đối tượng được tham gia chương trình thưởng cổ phiếu phát hành ở nước ngoài
+95652,135/2015/NĐ-CP,Các cơ quan quản lý nhà nước,DoiTuongApDung,content_clean,gemini,0.9,Các cơ quan quản lý nhà nước tham gia quản lý hoạt động đầu tư gián tiếp ra nước ngoài
+95652,135/2015/NĐ-CP,Tổ chức kinh tế có vốn đầu tư nước ngoài,DoiTuongApDung,content_clean,gemini,0.9,Tổ chức kinh tế có vốn đầu tư nước ngoài (thuộc đối tượng quy định tại Khoản 1 Điều 23 Luật Đầu tư)
+95652,135/2015/NĐ-CP,Đầu tư gián tiếp ra nước ngoài,LinhVuc,content_clean,gemini,0.93,Nghị định quy định về đầu tư gián tiếp ra nước ngoài
+95652,135/2015/NĐ-CP,Ngoại hối,LinhVuc,content_clean,gemini,0.85,Căn cứ Pháp lệnh Ngoại hối ngày 13 tháng 12 năm 2005
+f69936f0-6937-11f1-a48d-29bc6b0fd706,17/VBHN-BTC,Bộ Tài chính,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Bộ Tài chính
+f69936f0-6937-11f1-a48d-29bc6b0fd706,17/VBHN-BTC,Nguyễn Đức Chi,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Nguyễn Đức Chi
+f69936f0-6937-11f1-a48d-29bc6b0fd706,17/VBHN-BTC,Chính phủ,CoQuan,content_clean,gemini,0.95,Nghị định số 156/2020/NĐ-CP ngày 31 tháng 12 năm 2020 của Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh vực chứng khoán và thị trường chứng khoán
+f69936f0-6937-11f1-a48d-29bc6b0fd706,17/VBHN-BTC,Bộ Tài chính,CoQuan,content_clean,gemini,0.9,Theo đề nghị của Bộ trưởng Bộ Tài chính;
+f69936f0-6937-11f1-a48d-29bc6b0fd706,17/VBHN-BTC,Tổ chức,DoiTuongApDung,content_clean,gemini,0.85,"Điều 2. Đối tượng bị xử phạt vi phạm hành chính 1. Tổ chức,"
+f69936f0-6937-11f1-a48d-29bc6b0fd706,17/VBHN-BTC,công ty đại chúng,DoiTuongApDung,content_clean,gemini,0.88,vi phạm quy định về kiểm toán công ty đại chúng
+f69936f0-6937-11f1-a48d-29bc6b0fd706,17/VBHN-BTC,tổ chức niêm yết,DoiTuongApDung,content_clean,gemini,0.88,"tổ chức niêm yết, tổ chức thực hiện chào bán chứng khoán ra công chúng"
+f69936f0-6937-11f1-a48d-29bc6b0fd706,17/VBHN-BTC,công ty chứng khoán,DoiTuongApDung,content_clean,gemini,0.88,"công ty chứng khoán, công ty đầu tư chứng khoán"
+f69936f0-6937-11f1-a48d-29bc6b0fd706,17/VBHN-BTC,công ty đầu tư chứng khoán,DoiTuongApDung,content_clean,gemini,0.88,"công ty chứng khoán, công ty đầu tư chứng khoán"
+f69936f0-6937-11f1-a48d-29bc6b0fd706,17/VBHN-BTC,quỹ và công ty quản lý quỹ đầu tư chứng khoán,DoiTuongApDung,content_clean,gemini,0.88,quỹ và công ty quản lý quỹ đầu tư chứng khoán
+f69936f0-6937-11f1-a48d-29bc6b0fd706,17/VBHN-BTC,chứng khoán và thị trường chứng khoán,LinhVuc,content_clean,gemini,0.95,quy định xử phạt vi phạm hành chính trong lĩnh vực chứng khoán và thị trường chứng khoán
+30402,202/2012/TT-BTC,Bộ Tài chính,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Bộ Tài chính
+30402,202/2012/TT-BTC,Trần Xuân Hà,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Trần Xuân Hà
+30402,202/2012/TT-BTC,Bộ Tài chính,CoQuan,content_clean,gemini,0.95,"Bộ trưởng Bộ Tài chính ban hành Thông tư hướng dẫn về đăng ký, quản lý và công khai danh sách kiểm toán viên hành nghề kiểm toán."
+30402,202/2012/TT-BTC,Trần Xuân Hà,NguoiKy,content_clean,gemini,0.9,Người ký (Gốc): Trần Xuân Hà
+30402,202/2012/TT-BTC,"Kiểm toán viên đăng ký hành nghề tại doanh nghiệp kiểm toán, chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam",DoiTuongApDung,content_clean,gemini,0.92,"1. Kiểm toán viên đăng ký hành nghề tại doanh nghiệp kiểm toán, chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam."
+30402,202/2012/TT-BTC,"Doanh nghiệp kiểm toán, chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam",DoiTuongApDung,content_clean,gemini,0.92,"2. Doanh nghiệp kiểm toán, chi nhánh doanh nghiệp kiểm toán nước ngoài tại Việt Nam (sau đây gọi chung là doanh nghiệp kiểm toán)."
+30402,202/2012/TT-BTC,"Tổ chức, cá nhân có liên quan đến việc đăng ký, quản lý và công khai danh sách kiểm toán viên hành nghề kiểm toán",DoiTuongApDung,content_clean,gemini,0.9,"3. Tổ chức, cá nhân có liên quan đến việc đăng ký, quản lý và công khai danh sách kiểm toán viên hành nghề kiểm toán."
+30402,202/2012/TT-BTC,Kiểm toán,LinhVuc,content_clean,gemini,0.92,"Thông tư hướng dẫn về đăng ký, quản lý và công khai danh sách kiểm toán viên hành nghề kiểm toán"
+173460,57/2024/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+173460,57/2024/TT-NHNN,Đoàn Thái Sơn,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đoàn Thái Sơn
+173460,57/2024/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,content_clean,gemini,0.95,NGÂN HÀNG NHÀ NƯỚC VIỆT NAM CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+173460,57/2024/TT-NHNN,Đoàn Thái Sơn,NguoiKy,content_clean,gemini,0.85,Người ký (Gốc): Đoàn Thái Sơn
+173460,57/2024/TT-NHNN,Công ty tài chính tổng hợp,DoiTuongApDung,content_clean,gemini,0.92,1. Công ty tài chính tổng hợp.
+173460,57/2024/TT-NHNN,Công ty tài chính chuyên ngành,DoiTuongApDung,content_clean,gemini,0.92,2. Công ty tài chính chuyên ngành.
+173460,57/2024/TT-NHNN,"Các tổ chức, cá nhân có liên quan đến việc cấp Giấy phép lần đầu của tổ chức tín dụng phi ngân hàng",DoiTuongApDung,content_clean,gemini,0.9,"3. Các tổ chức, cá nhân có liên quan đến việc cấp Giấy phép lần đầu của tổ chức tín dụng phi ngân hàng."
+173460,57/2024/TT-NHNN,"Thanh tra, giám sát ngân hàng",LinhVuc,content_clean,gemini,0.9,"Lĩnh vực (Gốc): Thanh tra, giám sát ngân hàng"
+27257,44/2011/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+27257,44/2011/TT-NHNN,Trần Minh Tuấn,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Trần Minh Tuấn
+27257,44/2011/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,content_clean,gemini,0.95,NGÂN HÀNG NHÀ NƯỚC VIỆT NAM ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+27257,44/2011/TT-NHNN,Tổ chức tín dụng,DoiTuongApDung,content_clean,gemini,0.92,1. Tổ chức tín dụng;
+27257,44/2011/TT-NHNN,Chi nhánh ngân hàng nước ngoài,DoiTuongApDung,content_clean,gemini,0.92,2. Chi nhánh ngân hàng nước ngoài;
+27257,44/2011/TT-NHNN,"Tổ chức, cá nhân có liên quan đến hệ thống kiểm soát nội bộ và kiểm toán nội bộ của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài",DoiTuongApDung,content_clean,gemini,0.9,"3. Tổ chức, cá nhân có liên quan đến hệ thống kiểm soát nội bộ và kiểm toán nội bộ của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài."
+27257,44/2011/TT-NHNN,Kiểm soát nội bộ,LinhVuc,content_clean,gemini,0.85,"THÔNG TƯ Q uy định về hệ thống kiểm soát nội bộ và kiểm toán nội bộ của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài"
+27257,44/2011/TT-NHNN,Kiểm toán nội bộ,LinhVuc,content_clean,gemini,0.85,"THÔNG TƯ Q uy định về hệ thống kiểm soát nội bộ và kiểm toán nội bộ của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài"
+143217,66/2020/TT-BTC,Bộ Tài chính,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Bộ Tài chính
+143217,66/2020/TT-BTC,Bộ Tài chính,CoQuan,content_clean,gemini,0.95,Bộ trưởng Bộ Tài chính ban hành Thông tư ban hành Quy chế mẫu về kiếm toán nội bộ áp dụng cho doanh nghiệp.
+143217,66/2020/TT-BTC,Đỗ Hoàng Anh Tuấn,NguoiKy,content_clean,gemini,0.95,KT. BỘ TRƯỞNG THỨ TRƯỞNG (Đã ký) Đỗ Hoàng Anh Tuấn
+143217,66/2020/TT-BTC,các doanh nghiệp quy định tại khoản 1 Điều 10 Nghị định số 05/2019/NĐ-CP,DoiTuongApDung,content_clean,gemini,0.92,Thông tư này áp dụng đối với các doanh nghiệp quy định tại khoản 1 Điều 10 Nghị định số 05/2019/NĐ-CP ngày 22 tháng 01 năm 2019 của Chính phủ về kiếm toán nội bộ.
+143217,66/2020/TT-BTC,Các doanh nghiệp không thuộc quy định tại khoản 1 Điều này,DoiTuongApDung,content_clean,gemini,0.88,Các doanh nghiệp không thuộc quy định tại khoản 1 Điều này được khuyến khích xây dựng Quy chế kiểm toán nội bộ trên cơ sở tham chiếu mẫu Quy chế kiểm toán nội bộ ban hành kèm theo Thông tư này.
+143217,66/2020/TT-BTC,Kiểm toán,LinhVuc,content_clean,gemini,0.9,Thông tư ban hành Quy chế mẫu về kiếm toán nội bộ áp dụng cho doanh nghiệp.
+168859,29/2024/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+168859,29/2024/TT-NHNN,Đào Minh Tú,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đào Minh Tú
+150974,08/2021/TT-BTC,Bộ Tài chính,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Bộ Tài chính
+150974,08/2021/TT-BTC,Tạ Anh Tuấn,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Tạ Anh Tuấn
+150974,08/2021/TT-BTC,Bộ Tài chính,CoQuan,content_clean,gemini,0.95,Bộ trưởng Bộ Tài chính ban hành Thông tư ban hành chuẩn mực kiểm toán nội bộ Việt Nam và các nguyên tắc đạo đức nghề nghiệp kiểm toán nội bộ.
+150974,08/2021/TT-BTC,Tạ Anh Tuấn,NguoiKy,content_clean,gemini,0.95,"KT. BỘ TRƯỞNG
+THỨ TRƯỞNG
+(Đã ký)
+Tạ Anh Tuấn"
+150974,08/2021/TT-BTC,"các doanh nghiệp, cơ quan nhà nước, đơn vị sự nghiệp công lập",DoiTuongApDung,content_clean,gemini,0.92,"Chuẩn mực kiểm toán nội bộ Việt Nam và các nguyên tắc đạo đức nghề nghiệp kiểm toán nội bộ áp dụng đối với các doanh nghiệp, cơ quan nhà nước, đơn vị sự nghiệp công lập quy định tại Điều 8, Điều 9, Điều 10 Nghị định số 05/2019/NĐ-CP"
+150974,08/2021/TT-BTC,các tổ chức cá nhân có liên quan trong hoạt động kiểm toán nội bộ,DoiTuongApDung,content_clean,gemini,0.9,và các tổ chức cá nhân có liên quan trong hoạt động kiểm toán nội bộ của các đơn vị này.
+150974,08/2021/TT-BTC,Kiểm toán,LinhVuc,content_clean,gemini,0.92,Ban hành chuẩn mực kiểm toán nội bộ Việt Nam và các nguyên tắc đạo đức nghề nghiệp kiểm toán nội bộ
+150974,08/2021/TT-BTC,Kế toán,LinhVuc,content_clean,gemini,0.88,Căn cứ Luật kế toán số 88/2015/QH13 ngày 20 tháng 11 năm 2015;
+164719,22/2023/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+164719,22/2023/TT-NHNN,Đoàn Thái Sơn,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đoàn Thái Sơn
+173695,56/2024/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+173695,56/2024/TT-NHNN,Đoàn Thái Sơn,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đoàn Thái Sơn
+173695,56/2024/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,content_clean,gemini,0.95,NGÂN HÀNG NHÀ NƯỚC VIỆT NAM CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+173695,56/2024/TT-NHNN,Đoàn Thái Sơn,NguoiKy,content_clean,gemini,0.9,Người ký (Gốc): Đoàn Thái Sơn
+173695,56/2024/TT-NHNN,Ngân hàng thương mại,DoiTuongApDung,content_clean,gemini,0.92,1. Ngân hàng thương mại.
+173695,56/2024/TT-NHNN,Chi nhánh ngân hàng nước ngoài,DoiTuongApDung,content_clean,gemini,0.92,2. Chi nhánh ngân hàng nước ngoài.
+173695,56/2024/TT-NHNN,"Văn phòng đại diện tại Việt Nam của tổ chức tín dụng nước ngoài, tổ chức nước ngoài khác có hoạt động ngân hàng",DoiTuongApDung,content_clean,gemini,0.92,"3. Văn phòng đại diện tại Việt Nam của tổ chức tín dụng nước ngoài, tổ chức nước ngoài khác có hoạt động ngân hàng (sau đây gọi là văn phòng đại diện nước ngoài)."
+173695,56/2024/TT-NHNN,"Các tổ chức, cá nhân có liên quan đến hồ sơ, thủ tục cấp Giấy phép lần đầu của ngân hàng thương mại, chi nhánh ngân hàng nước ngoài và văn phòng đại diện nước ngoài",DoiTuongApDung,content_clean,gemini,0.9,"4. Các tổ chức, cá nhân có liên quan đến hồ sơ, thủ tục cấp Giấy phép lần đầu của ngân hàng thương mại, chi nhánh ngân hàng nước ngoài và văn phòng đại diện nước ngoài."
+173695,56/2024/TT-NHNN,"Thanh tra, giám sát ngân hàng",LinhVuc,content_clean,gemini,0.88,"Theo đề nghị của Chánh Thanh tra, giám sát ngân hàng;"
+186482,69/2025/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+186482,69/2025/TT-NHNN,Đoàn Thái Sơn,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đoàn Thái Sơn
+186482,69/2025/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,content_clean,gemini,0.95,NGÂN HÀNG NHÀ NƯỚC VIỆT NAM ------- CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+186482,69/2025/TT-NHNN,Đoàn Thái Sơn,NguoiKy,content_clean,gemini,0.9,Người ký (Gốc): Đoàn Thái Sơn
+186482,69/2025/TT-NHNN,Công ty Quản lý tài sản,DoiTuongApDung,content_clean,gemini,0.92,"Chủ thể phát hành trái phiếu, trái phiếu đặc biệt là Công ty Quản lý tài sản."
+186482,69/2025/TT-NHNN,tổ chức tín dụng,DoiTuongApDung,content_clean,gemini,0.9,"Công ty Quản lý tài sản phát hành trái phiếu, trái phiếu đặc biệt để thanh toán cho các tổ chức tín dụng, chi nhánh ngân hàng nước ngoài bán nợ"
+186482,69/2025/TT-NHNN,chi nhánh ngân hàng nước ngoài,DoiTuongApDung,content_clean,gemini,0.9,"Công ty Quản lý tài sản phát hành trái phiếu, trái phiếu đặc biệt để thanh toán cho các tổ chức tín dụng, chi nhánh ngân hàng nước ngoài bán nợ"
+186482,69/2025/TT-NHNN,"quản lý, giám sát ngân hàng",LinhVuc,content_clean,gemini,0.88,"trong lĩnh vực quản lý, giám sát ngân hàng liên quan đến cắt giảm điều kiện kinh doanh, đơn giản hóa thủ tục hành chính"
+112924,105/2016/TT-BTC,Bộ Tài chính,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Bộ Tài chính
+112924,105/2016/TT-BTC,Trần Xuân Hà,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Trần Xuân Hà
+112924,105/2016/TT-BTC,Bộ Tài chính,CoQuan,content_clean,gemini,0.95,BỘ TÀI CHÍNH CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+112924,105/2016/TT-BTC,Trần Xuân Hà,NguoiKy,content_clean,gemini,0.9,Người ký (Gốc): Trần Xuân Hà
+112924,105/2016/TT-BTC,tổ chức kinh doanh chứng khoán,DoiTuongApDung,content_clean,gemini,0.93,"Thông tư này áp dụng đối với tổ chức kinh doanh chứng khoán, quỹ đầu tư chứng khoán, công ty đầu tư chứng khoán, doanh nghiệp kinh doanh bảo hiểm"
+112924,105/2016/TT-BTC,quỹ đầu tư chứng khoán,DoiTuongApDung,content_clean,gemini,0.93,"Thông tư này áp dụng đối với tổ chức kinh doanh chứng khoán, quỹ đầu tư chứng khoán, công ty đầu tư chứng khoán, doanh nghiệp kinh doanh bảo hiểm"
+112924,105/2016/TT-BTC,công ty đầu tư chứng khoán,DoiTuongApDung,content_clean,gemini,0.93,"Thông tư này áp dụng đối với tổ chức kinh doanh chứng khoán, quỹ đầu tư chứng khoán, công ty đầu tư chứng khoán, doanh nghiệp kinh doanh bảo hiểm"
+112924,105/2016/TT-BTC,doanh nghiệp kinh doanh bảo hiểm,DoiTuongApDung,content_clean,gemini,0.93,"Thông tư này áp dụng đối với tổ chức kinh doanh chứng khoán, quỹ đầu tư chứng khoán, công ty đầu tư chứng khoán, doanh nghiệp kinh doanh bảo hiểm"
+112924,105/2016/TT-BTC,"các cơ quan, tổ chức, cá nhân có liên quan đến hoạt động đầu tư gián tiếp ra nước ngoài",DoiTuongApDung,content_clean,gemini,0.9,"và các cơ quan, tổ chức, cá nhân có liên quan đến hoạt động đầu tư gián tiếp ra nước ngoài."
+112924,105/2016/TT-BTC,Chứng khoán,LinhVuc,content_clean,gemini,0.88,Căn cứ Luật Chứng khoán ngày 29 tháng 6 năm 2006
+112924,105/2016/TT-BTC,Bảo hiểm,LinhVuc,content_clean,gemini,0.88,Căn cứ Luật Kinh doanh bảo hiểm ngày 09 tháng 12 năm 2000
+112924,105/2016/TT-BTC,Đầu tư,LinhVuc,content_clean,gemini,0.85,Căn cứ Luật Đầu tư ngày 26 tháng 11 năm 2014
+174218,62/2024/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+174218,62/2024/TT-NHNN,Đoàn Thái Sơn,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đoàn Thái Sơn
+174218,62/2024/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,content_clean,gemini,0.95,NGÂN HÀNG NHÀ NƯỚC VIỆT NAM
+174218,62/2024/TT-NHNN,Đoàn Thái Sơn,NguoiKy,content_clean,gemini,0.9,Người ký (Gốc): Đoàn Thái Sơn
+174218,62/2024/TT-NHNN,Các tổ chức tín dụng,DoiTuongApDung,content_clean,gemini,0.92,Các tổ chức tín dụng bao gồm: a) Ngân hàng thương mại; b) Tổ chức tín dụng phi ngân hàng
+174218,62/2024/TT-NHNN,Ngân hàng thương mại,DoiTuongApDung,content_clean,gemini,0.92,Ngân hàng thương mại
+174218,62/2024/TT-NHNN,Tổ chức tín dụng phi ngân hàng,DoiTuongApDung,content_clean,gemini,0.92,Tổ chức tín dụng phi ngân hàng bao gồm công ty tài chính tổng hợp và công ty tài chính chuyên ngành
+174218,62/2024/TT-NHNN,"Tổ chức, cá nhân có liên quan đến việc tổ chức lại tổ chức tín dụng",DoiTuongApDung,content_clean,gemini,0.9,"Tổ chức, cá nhân có liên quan đến việc tổ chức lại tổ chức tín dụng."
+174218,62/2024/TT-NHNN,"Thanh tra, giám sát ngân hàng",LinhVuc,content_clean,gemini,0.88,"Theo đề nghị của Chánh Thanh tra, giám sát ngân hàng"
+186888,62/2025/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+186888,62/2025/TT-NHNN,Đoàn Thái Sơn,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đoàn Thái Sơn
+6e689cd0-6f81-11f1-94d6-fd5d6d5ff793,52/VBHN-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+6e689cd0-6f81-11f1-94d6-fd5d6d5ff793,52/VBHN-NHNN,Đoàn Thái Sơn,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đoàn Thái Sơn
+185630,63/2025/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+185630,63/2025/TT-NHNN,Đoàn Thái Sơn,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đoàn Thái Sơn
+117310,41/2016/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+117310,41/2016/TT-NHNN,Nguyễn Đồng Tiến,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Nguyễn Đồng Tiến
+166269,17/2023/QH15,Quốc hội,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Quốc hội
+166269,17/2023/QH15,Vương Đình Huệ,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Vương Đình Huệ
+177271,01/2025/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+177271,01/2025/TT-NHNN,Đoàn Thái Sơn,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đoàn Thái Sơn
+44209,01/2014/TT-NHNN,Ngân hàng Nhà nước Việt Nam,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Ngân hàng Nhà nước Việt Nam
+44209,01/2014/TT-NHNN,Đào Minh Tú,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Đào Minh Tú
+25692,46/2010/QH12,Quốc hội,CoQuan,metadata,metadata_rule,0.98,Từ cột co_quan_ban_hanh của metadata: Quốc hội
+25692,46/2010/QH12,Nguyễn Phú Trọng,NguoiKy,metadata,metadata_rule,0.98,Từ cột nguoi_ky của metadata: Nguyễn Phú Trọng
