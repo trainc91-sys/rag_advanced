@@ -1,0 +1,12 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "c1",
+      "strategy": "hierarchical",
+      "source": "Văn bản A",
+      "page_start": 1,
+      "page_end": 1,
+      "text": "Nội dung điều 1."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "question_id": "Q01",
+    "question": "Điều 10 của Luật Dân sự quy định thế nào về quyền thừa kế?",
+    "relevant_child_ids": ["src:1"],
+    "relevant_parent_ids": ["p1"]
+  },
+  {
+    "question_id": "Q02",
+    "question": "Trách nhiệm trả nợ được điều chỉnh ra sao khi hợp đồng vay vốn hết hạn?",
+    "relevant_child_ids": ["src:2"],
+    "relevant_parent_ids": ["p2"]
+  }
+]

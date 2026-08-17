@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.env
+storage/chroma/*
+storage/hierarchy/*
+storage/huggingface/*
+reports/*
