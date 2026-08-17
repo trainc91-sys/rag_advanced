@@ -1,0 +1,26 @@
+---
+id: KS-002
+title: "KS-002 - Kiểm tra hạn mức phê duyệt trên hệ thống"
+aliases:
+  - "KS-002 - Kiểm tra hạn mức phê duyệt trên hệ thống"
+  - "Kiểm tra hạn mức phê duyệt trên hệ thống"
+  - "KS-002"
+type: KiemSoat
+verification_status: VERIFIED
+data_origin: SYNTHETIC
+---
+
+# KS-002 - Kiểm tra hạn mức phê duyệt trên hệ thống
+
+## 1. Thông Tin Kiểm Soát
+- **Mã Kiểm Soát:** `KS-002`
+- **Tên Kiểm Soát:** Kiểm tra hạn mức phê duyệt trên hệ thống
+- **Loại Kiểm Soát (Control Type):** Preventive
+- **Tần Suất (Frequency):** Theo giao dich
+- **Hiệu Quả (Effectiveness):** `Hieu qua`
+- **Vai Trò Phụ Trách (Owner Role ID):** `VT-CREDIT-APPROVER`
+
+## 2. Rủi Ro Được Giảm Thiểu (MITIGATES)
+- [[RR-002 - Phê duyệt tín dụng vượt thẩm quyền]]
+  - *Quan hệ:* `MITIGATES` | *Xác minh:* `VERIFIED`
+  - *Bằng chứng:* "Dữ liệu mô phỏng: kiểm tra hạn mức ngăn phê duyệt vượt thẩm quyền"

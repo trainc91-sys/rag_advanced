@@ -1,10 +1,15 @@
 import os
+import re
 import sys
 import shutil
 import pandas as pd
 
 if sys.stdout.encoding.lower() != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
+
+def sanitize_filename(name):
+    """Xóa các ký tự không hợp lệ trong tên file trên Windows"""
+    return re.sub(r'[\\/:*?"<>|]', '', str(name)).strip()
 
 def build_wiki():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -36,9 +41,14 @@ def build_wiki():
     # Map entity details by ID
     entity_map = {row["id"]: row.to_dict() for _, row in entities_df.iterrows()}
     
+    # Helper to get full page name (ID - Tên)
+    def get_page_name(eid):
+        info = entity_map.get(eid, {})
+        name = info.get("name") or info.get("description") or eid
+        cleaned_name = sanitize_filename(name)
+        return f"{eid} - {cleaned_name}"
+
     # Build indexing of relationships
-    # incoming_rels[target_id] = list of rels where target_id matches
-    # outgoing_rels[source_id] = list of rels where source_id matches
     incoming_rels = {}
     outgoing_rels = {}
     
@@ -56,7 +66,9 @@ def build_wiki():
     risks = entities_df[entities_df["type"] == "RuiRo"]
     for _, r in risks.iterrows():
         rid = r["id"]
-        filename = f"{rid}.md"
+        rname = r["name"]
+        page_title = get_page_name(rid)
+        filename = f"{page_title}.md"
         filepath = os.path.join(risks_dir, filename)
         
         controls_mitigating = incoming_rels.get(rid, [])
@@ -64,15 +76,21 @@ def build_wiki():
         
         content = f"""---
 id: {rid}
+title: "{page_title}"
+aliases:
+  - "{page_title}"
+  - "{rname}"
+  - "{rid}"
 type: RuiRo
 verification_status: {r['verification_status']}
 data_origin: {r['data_origin']}
 ---
 
-# {rid} — {r['name']}
+# {page_title}
 
 ## 1. Thông Tin Chung
 - **Mã Rủi Ro:** `{rid}`
+- **Tên Rủi Ro:** {rname}
 - **Danh Mục (Category):** {r['category']}
 - **Mô Tả:** {r['description']}
 - **Đơn Vị Phụ Trách (Owner Unit ID):** `{r['owner_unit_id']}`
@@ -91,10 +109,9 @@ data_origin: {r['data_origin']}
         if controls_mitigating:
             for rel in controls_mitigating:
                 ctrl_id = rel["source_id"]
-                ctrl_info = entity_map.get(ctrl_id, {})
-                ctrl_name = ctrl_info.get("name", ctrl_id)
+                ctrl_page_name = get_page_name(ctrl_id)
                 wikilink_count += 1
-                content += f"- [[{ctrl_id}]] - **{ctrl_name}**\n"
+                content += f"- [[{ctrl_page_name}]]\n"
                 content += f"  - *Quan hệ:* `{rel['relationship_type']}` | *Xác minh:* `{rel['verification_status']}`\n"
                 content += f"  - *Bằng chứng:* \"{rel['evidence_quote']}\"\n"
         else:
@@ -104,10 +121,9 @@ data_origin: {r['data_origin']}
         if events_observed:
             for rel in events_observed:
                 evt_id = rel["target_id"]
-                evt_info = entity_map.get(evt_id, {})
-                evt_desc = evt_info.get("description", evt_id)
+                evt_page_name = get_page_name(evt_id)
                 wikilink_count += 1
-                content += f"- [[{evt_id}]] - **{evt_desc}**\n"
+                content += f"- [[{evt_page_name}]]\n"
                 content += f"  - *Quan hệ:* `{rel['relationship_type']}` | *Xác minh:* `{rel['verification_status']}`\n"
                 content += f"  - *Bằng chứng:* \"{rel['evidence_quote']}\"\n"
         else:
@@ -121,23 +137,30 @@ data_origin: {r['data_origin']}
     controls = entities_df[entities_df["type"] == "KiemSoat"]
     for _, c in controls.iterrows():
         cid = c["id"]
-        filename = f"{cid}.md"
+        cname = c["name"]
+        page_title = get_page_name(cid)
+        filename = f"{page_title}.md"
         filepath = os.path.join(controls_dir, filename)
         
         risks_mitigated = outgoing_rels.get(cid, [])
         
         content = f"""---
 id: {cid}
+title: "{page_title}"
+aliases:
+  - "{page_title}"
+  - "{cname}"
+  - "{cid}"
 type: KiemSoat
 verification_status: {c['verification_status']}
 data_origin: {c['data_origin']}
 ---
 
-# {cid} — {c['name']}
+# {page_title}
 
 ## 1. Thông Tin Kiểm Soát
 - **Mã Kiểm Soát:** `{cid}`
-- **Tên Kiểm Soát:** {c['name']}
+- **Tên Kiểm Soát:** {cname}
 - **Loại Kiểm Soát (Control Type):** {c['control_type']}
 - **Tần Suất (Frequency):** {c['frequency']}
 - **Hiệu Quả (Effectiveness):** `{c['effectiveness']}`
@@ -148,10 +171,9 @@ data_origin: {c['data_origin']}
         if risks_mitigated:
             for rel in risks_mitigated:
                 risk_id = rel["target_id"]
-                risk_info = entity_map.get(risk_id, {})
-                risk_name = risk_info.get("name", risk_id)
+                risk_page_name = get_page_name(risk_id)
                 wikilink_count += 1
-                content += f"- [[{risk_id}]] - **{risk_name}**\n"
+                content += f"- [[{risk_page_name}]]\n"
                 content += f"  - *Quan hệ:* `{rel['relationship_type']}` | *Xác minh:* `{rel['verification_status']}`\n"
                 content += f"  - *Bằng chứng:* \"{rel['evidence_quote']}\"\n"
         else:
@@ -165,7 +187,9 @@ data_origin: {c['data_origin']}
     events = entities_df[entities_df["type"] == "SuKienRuiRo"]
     for _, e in events.iterrows():
         eid = e["id"]
-        filename = f"{eid}.md"
+        ename = e["name"]
+        page_title = get_page_name(eid)
+        filename = f"{page_title}.md"
         filepath = os.path.join(events_dir, filename)
         
         risks_observed = incoming_rels.get(eid, [])
@@ -174,15 +198,21 @@ data_origin: {c['data_origin']}
         
         content = f"""---
 id: {eid}
+title: "{page_title}"
+aliases:
+  - "{page_title}"
+  - "{ename}"
+  - "{eid}"
 type: SuKienRuiRo
 verification_status: {e['verification_status']}
 data_origin: {e['data_origin']}
 ---
 
-# {eid} — {e['name']}
+# {page_title}
 
 ## 1. Thông Tin Sự Kiện
 - **Mã Sự Kiện:** `{eid}`
+- **Tên Sự Kiện:** {ename}
 - **Mô Tả Chi Tiết:** {e['description']}
 - **Mức Độ Nghiêm Trọng (Severity):** `{e['severity']}`
 - **Tổn Thất Tài Chính:** `{loss_val}`
@@ -194,10 +224,9 @@ data_origin: {e['data_origin']}
         if risks_observed:
             for rel in risks_observed:
                 risk_id = rel["source_id"]
-                risk_info = entity_map.get(risk_id, {})
-                risk_name = risk_info.get("name", risk_id)
+                risk_page_name = get_page_name(risk_id)
                 wikilink_count += 1
-                content += f"- [[{risk_id}]] - **{risk_name}**\n"
+                content += f"- [[{risk_page_name}]]\n"
                 content += f"  - *Quan hệ:* `{rel['relationship_type']}` | *Xác minh:* `{rel['verification_status']}`\n"
                 content += f"  - *Bằng chứng:* \"{rel['evidence_quote']}\"\n"
         else:
@@ -211,6 +240,10 @@ data_origin: {e['data_origin']}
     home_filepath = os.path.join(wiki_dir, "Home.md")
     home_content = f"""---
 id: HOME-001
+title: "Wiki Risk Graph Home"
+aliases:
+  - "Wiki Risk Graph Home"
+  - "Home"
 type: WikiHome
 verification_status: VERIFIED
 data_origin: SYNTHETIC
@@ -240,25 +273,28 @@ Chào mừng bạn đến với **Wiki Risk Graph**, hệ thống tri thức r�
 """
     for _, r in risks.iterrows():
         wikilink_count += 1
-        home_content += f"- [[{r['id']}]] — **{r['name']}** (Mức rủi ro: `{r['residual_level']}`)\n"
+        page_name = get_page_name(r['id'])
+        home_content += f"- [[{page_name}]] — (Mức rủi ro: `{r['residual_level']}`)\n"
 
     home_content += "\n### 2. 🟢 Danh Sách Kiểm Soát (`KiemSoat`)\n"
     for _, c in controls.iterrows():
         wikilink_count += 1
-        home_content += f"- [[{c['id']}]] — **{c['name']}** (Loại: `{c['control_type']}`)\n"
+        page_name = get_page_name(c['id'])
+        home_content += f"- [[{page_name}]] — (Loại: `{c['control_type']}`)\n"
 
     home_content += "\n### 3. 🟡 Danh Sách Sự Kiện Rủi Ro (`SuKienRuiRo`)\n"
     for _, e in events.iterrows():
         wikilink_count += 1
-        home_content += f"- [[{e['id']}]] — **{e['name']}** (Mức độ: `{e['severity']}`)\n"
+        page_name = get_page_name(e['id'])
+        home_content += f"- [[{page_name}]] — (Mức độ: `{e['severity']}`)\n"
 
     home_content += """
 ---
 
 ## 📍 Đường Đi Chi Tiết Mẫu (Sample Knowledge Path)
-`[KS-001: Đối soát tự động giao dịch]` 
-   └── 🛡️ *MITIGATES* ──> `[RR-001: Giao dịch chuyển tiền bị hạch toán sai]` 
-                              └── ⚠️ *OBSERVED_AS* ──> `[SK-001: Sai lệch trạng thái giao dịch...]`
+`[KS-001 - Đối soát tự động giao dịch và sổ cái]` 
+   └── 🛡️ *MITIGATES* ──> `[RR-001 - Giao dịch chuyển tiền bị hạch toán sai]` 
+                               └── ⚠️ *OBSERVED_AS* ──> `[SK-001 - Sai lệch trạng thái giao dịch...]`
 """
     with open(home_filepath, "w", encoding="utf-8") as f:
         f.write(home_content)
@@ -274,8 +310,6 @@ Chào mừng bạn đến với **Wiki Risk Graph**, hệ thống tri thức r�
     print(f"  + wiki/controls/ ({len(controls)} trang)")
     print(f"  + wiki/events/ ({len(events)} trang)")
     print(f"- Tổng số Obsidian [[wikilink]] đã chèn: {wikilink_count} wikilinks")
-    print("\n- Ví dụ luồng kết nối 3 chặng mẫu:")
-    print("  [[KS-001]] --(MITIGATES)--> [[RR-001]] --(OBSERVED_AS)--> [[SK-001]]")
     print("=" * 60)
 
 if __name__ == "__main__":

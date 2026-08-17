@@ -1,0 +1,39 @@
+---
+id: RR-009
+title: "RR-009 - Không phát hiện giao dịch bất thường"
+aliases:
+  - "RR-009 - Không phát hiện giao dịch bất thường"
+  - "Không phát hiện giao dịch bất thường"
+  - "RR-009"
+type: RuiRo
+verification_status: VERIFIED
+data_origin: SYNTHETIC
+---
+
+# RR-009 - Không phát hiện giao dịch bất thường
+
+## 1. Thông Tin Chung
+- **Mã Rủi Ro:** `RR-009`
+- **Tên Rủi Ro:** Không phát hiện giao dịch bất thường
+- **Danh Mục (Category):** Rui ro gian lan
+- **Mô Tả:** Luật phát hiện gian lận không được cập nhật
+- **Đơn Vị Phụ Trách (Owner Unit ID):** `DV-OPS`
+
+## 2. Diễn Giải Rủi Ro (Cause -> Event -> Impact)
+- **Nguyên Nhân (Cause):** Ngưỡng cảnh báo không phù hợp
+- **Sự Kiện (Event):** Giao dịch nghi ngờ không bị chặn kịp thời
+- **Tác Động (Impact):** Tổn thất tài chính và uy tín
+
+## 3. Mức Độ Rủi Ro
+- **Mức Rủi Ro Cố Hữu (Inherent Level):** `Cao`
+- **Mức Rủi Ro Còn Lại (Residual Level):** `Trung binh`
+
+## 4. Kiểm Soát Giảm Thiểu (MITIGATES)
+- [[KS-009 - Hiệu chỉnh luật phát hiện giao dịch gian lận]]
+  - *Quan hệ:* `MITIGATES` | *Xác minh:* `VERIFIED`
+  - *Bằng chứng:* "Dữ liệu mô phỏng: hiệu chỉnh luật giảm bỏ sót giao dịch bất thường"
+
+## 5. Sự Kiện Rủi Ro Quan Sát Được (OBSERVED_AS)
+- [[SK-009 - Giao dịch bất thường chỉ bị phát hiện sau khi khách hàng khiếu nại]]
+  - *Quan hệ:* `OBSERVED_AS` | *Xác minh:* `VERIFIED`
+  - *Bằng chứng:* "Dữ liệu mô phỏng: sự kiện không phát hiện bất thường"

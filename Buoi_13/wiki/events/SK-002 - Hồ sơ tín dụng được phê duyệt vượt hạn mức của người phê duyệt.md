@@ -1,0 +1,27 @@
+---
+id: SK-002
+title: "SK-002 - Hồ sơ tín dụng được phê duyệt vượt hạn mức của người phê duyệt"
+aliases:
+  - "SK-002 - Hồ sơ tín dụng được phê duyệt vượt hạn mức của người phê duyệt"
+  - "Hồ sơ tín dụng được phê duyệt vượt hạn mức của người phê duyệt"
+  - "SK-002"
+type: SuKienRuiRo
+verification_status: VERIFIED
+data_origin: SYNTHETIC
+---
+
+# SK-002 - Hồ sơ tín dụng được phê duyệt vượt hạn mức của người phê duyệt
+
+## 1. Thông Tin Sự Kiện
+- **Mã Sự Kiện:** `SK-002`
+- **Tên Sự Kiện:** Hồ sơ tín dụng được phê duyệt vượt hạn mức của người phê duyệt
+- **Mô Tả Chi Tiết:** Hồ sơ tín dụng được phê duyệt vượt hạn mức của người phê duyệt
+- **Mức Độ Nghiêm Trọng (Severity):** `Cao`
+- **Tổn Thất Tài Chính:** `0 VND`
+- **Ngày Xảy Ra:** `2024-04-02`
+- **Ngày Phát Hiện:** `2024-04-05`
+
+## 2. Rủi Ro Tương Ứng (OBSERVED_AS)
+- [[RR-002 - Phê duyệt tín dụng vượt thẩm quyền]]
+  - *Quan hệ:* `OBSERVED_AS` | *Xác minh:* `VERIFIED`
+  - *Bằng chứng:* "Dữ liệu mô phỏng: sự kiện vượt thẩm quyền"

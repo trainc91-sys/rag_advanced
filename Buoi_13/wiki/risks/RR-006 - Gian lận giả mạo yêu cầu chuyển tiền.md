@@ -1,0 +1,39 @@
+---
+id: RR-006
+title: "RR-006 - Gian lận giả mạo yêu cầu chuyển tiền"
+aliases:
+  - "RR-006 - Gian lận giả mạo yêu cầu chuyển tiền"
+  - "Gian lận giả mạo yêu cầu chuyển tiền"
+  - "RR-006"
+type: RuiRo
+verification_status: VERIFIED
+data_origin: SYNTHETIC
+---
+
+# RR-006 - Gian lận giả mạo yêu cầu chuyển tiền
+
+## 1. Thông Tin Chung
+- **Mã Rủi Ro:** `RR-006`
+- **Tên Rủi Ro:** Gian lận giả mạo yêu cầu chuyển tiền
+- **Danh Mục (Category):** Rui ro gian lan
+- **Mô Tả:** Nhận diện và xác thực yêu cầu chưa đủ mạnh
+- **Đơn Vị Phụ Trách (Owner Unit ID):** `DV-OPS`
+
+## 2. Diễn Giải Rủi Ro (Cause -> Event -> Impact)
+- **Nguyên Nhân (Cause):** Nhân viên không xác minh kênh liên lạc
+- **Sự Kiện (Event):** Yêu cầu chuyển tiền giả mạo được xử lý
+- **Tác Động (Impact):** Tổn thất tài chính
+
+## 3. Mức Độ Rủi Ro
+- **Mức Rủi Ro Cố Hữu (Inherent Level):** `Cao`
+- **Mức Rủi Ro Còn Lại (Residual Level):** `Trung binh`
+
+## 4. Kiểm Soát Giảm Thiểu (MITIGATES)
+- [[KS-006 - Xác thực hai kênh với lệnh chuyển tiền ngoại lệ]]
+  - *Quan hệ:* `MITIGATES` | *Xác minh:* `VERIFIED`
+  - *Bằng chứng:* "Dữ liệu mô phỏng: xác thực hai kênh giảm gian lận chuyển tiền"
+
+## 5. Sự Kiện Rủi Ro Quan Sát Được (OBSERVED_AS)
+- [[SK-006 - Yêu cầu chuyển tiền giả mạo được xử lý trước khi bị thu hồi]]
+  - *Quan hệ:* `OBSERVED_AS` | *Xác minh:* `VERIFIED`
+  - *Bằng chứng:* "Dữ liệu mô phỏng: sự kiện giả mạo chuyển tiền"

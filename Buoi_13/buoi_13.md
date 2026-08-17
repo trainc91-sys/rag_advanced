@@ -524,11 +524,11 @@ data_origin:
 - kiểm soát liên quan;
 - sự kiện liên quan.
 
-6. Kiểm soát liên quan phải dùng Obsidian wikilink:
+6. Kiểm soát liên quan phải dùng Obsidian wikilink theo định dạng:
 
-[[Tên kiểm soát]]
+[[Mã - Tên kiểm soát]] (Ví dụ: [[KS-001 - Đối soát tự động giao dịch và sổ cái]])
 
-7. Sự kiện liên quan cũng dùng wikilink.
+7. Sự kiện liên quan và Rủi ro cũng dùng wikilink theo định dạng [[Mã - Tên]].
 
 8. Trang KiemSoat phải có wikilink tới RuiRo mà nó MITIGATES.
 
@@ -544,7 +544,7 @@ data_origin:
 
 12. Không tự bịa tên owner_unit_id hoặc owner_role_id.
 
-13. Tên file phải được xử lý an toàn nhưng wikilink phải hoạt động chính xác trong Obsidian.
+13. Tên file Markdown phải đặt theo định dạng `Mã - Tên.md` (Ví dụ: `KS-001 - Đối soát tự động giao dịch và sổ cái.md`) để Obsidian Graph View hiển thị tên đầy đủ trên đồ thị. Tên file được xử lý an toàn loại bỏ các ký tự cấm của hệ điều hành.
 
 14. Tạo wiki/Home.md làm trang bắt đầu.
 

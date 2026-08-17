@@ -1,0 +1,39 @@
+---
+id: RR-007
+title: "RR-007 - Chậm báo cáo giao dịch đáng ngờ"
+aliases:
+  - "RR-007 - Chậm báo cáo giao dịch đáng ngờ"
+  - "Chậm báo cáo giao dịch đáng ngờ"
+  - "RR-007"
+type: RuiRo
+verification_status: VERIFIED
+data_origin: SYNTHETIC
+---
+
+# RR-007 - Chậm báo cáo giao dịch đáng ngờ
+
+## 1. Thông Tin Chung
+- **Mã Rủi Ro:** `RR-007`
+- **Tên Rủi Ro:** Chậm báo cáo giao dịch đáng ngờ
+- **Danh Mục (Category):** Rui ro tuan thu
+- **Mô Tả:** Theo dõi cảnh báo AML không kịp thời
+- **Đơn Vị Phụ Trách (Owner Unit ID):** `DV-COMPLIANCE`
+
+## 2. Diễn Giải Rủi Ro (Cause -> Event -> Impact)
+- **Nguyên Nhân (Cause):** Khối lượng cảnh báo vượt năng lực xử lý
+- **Sự Kiện (Event):** Báo cáo giao dịch đáng ngờ nộp muộn
+- **Tác Động (Impact):** Chế tài và rủi ro pháp lý
+
+## 3. Mức Độ Rủi Ro
+- **Mức Rủi Ro Cố Hữu (Inherent Level):** `Cao`
+- **Mức Rủi Ro Còn Lại (Residual Level):** `Trung binh`
+
+## 4. Kiểm Soát Giảm Thiểu (MITIGATES)
+- [[KS-007 - Theo dõi SLA xử lý cảnh báo AML]]
+  - *Quan hệ:* `MITIGATES` | *Xác minh:* `VERIFIED`
+  - *Bằng chứng:* "Dữ liệu mô phỏng: theo dõi SLA giảm nguy cơ báo cáo muộn"
+
+## 5. Sự Kiện Rủi Ro Quan Sát Được (OBSERVED_AS)
+- [[SK-007 - Báo cáo giao dịch đáng ngờ nộp quá hạn nội bộ]]
+  - *Quan hệ:* `OBSERVED_AS` | *Xác minh:* `VERIFIED`
+  - *Bằng chứng:* "Dữ liệu mô phỏng: sự kiện báo cáo AML muộn"

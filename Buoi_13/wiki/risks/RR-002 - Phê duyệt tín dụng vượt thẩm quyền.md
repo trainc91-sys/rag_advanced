@@ -1,0 +1,39 @@
+---
+id: RR-002
+title: "RR-002 - Phê duyệt tín dụng vượt thẩm quyền"
+aliases:
+  - "RR-002 - Phê duyệt tín dụng vượt thẩm quyền"
+  - "Phê duyệt tín dụng vượt thẩm quyền"
+  - "RR-002"
+type: RuiRo
+verification_status: VERIFIED
+data_origin: SYNTHETIC
+---
+
+# RR-002 - Phê duyệt tín dụng vượt thẩm quyền
+
+## 1. Thông Tin Chung
+- **Mã Rủi Ro:** `RR-002`
+- **Tên Rủi Ro:** Phê duyệt tín dụng vượt thẩm quyền
+- **Danh Mục (Category):** Rui ro tin dung
+- **Mô Tả:** Kiểm tra hạn mức phê duyệt không hiệu lực
+- **Đơn Vị Phụ Trách (Owner Unit ID):** `DV-CREDIT`
+
+## 2. Diễn Giải Rủi Ro (Cause -> Event -> Impact)
+- **Nguyên Nhân (Cause):** Phân quyền trên hệ thống không cập nhật
+- **Sự Kiện (Event):** Khoản vay được phê duyệt vượt thẩm quyền
+- **Tác Động (Impact):** Tăng nợ xấu và vi phạm quy định
+
+## 3. Mức Độ Rủi Ro
+- **Mức Rủi Ro Cố Hữu (Inherent Level):** `Cao`
+- **Mức Rủi Ro Còn Lại (Residual Level):** `Trung binh`
+
+## 4. Kiểm Soát Giảm Thiểu (MITIGATES)
+- [[KS-002 - Kiểm tra hạn mức phê duyệt trên hệ thống]]
+  - *Quan hệ:* `MITIGATES` | *Xác minh:* `VERIFIED`
+  - *Bằng chứng:* "Dữ liệu mô phỏng: kiểm tra hạn mức ngăn phê duyệt vượt thẩm quyền"
+
+## 5. Sự Kiện Rủi Ro Quan Sát Được (OBSERVED_AS)
+- [[SK-002 - Hồ sơ tín dụng được phê duyệt vượt hạn mức của người phê duyệt]]
+  - *Quan hệ:* `OBSERVED_AS` | *Xác minh:* `VERIFIED`
+  - *Bằng chứng:* "Dữ liệu mô phỏng: sự kiện vượt thẩm quyền"
