@@ -2,7 +2,7 @@
 **Thư viện sử dụng**: Ragas Evaluation Framework  
 **Mô hình Pipeline (Generator)**: `Qwen/Qwen3.6-35B-A3B:deepinfra` (hoặc Gemini-3.6-Flash)  
 **Mô hình Judger (Evaluator)**: `deepseek-ai/DeepSeek-V4-Flash-0731:deepinfra` (hoặc Gemini-3.6-Flash, LLM-as-a-judge)  
-**Ngày thực hiện**: 2026-08-19 14:32:31  
+**Ngày thực hiện**: 2026-08-19 20:48:39  
 
 ---
 
