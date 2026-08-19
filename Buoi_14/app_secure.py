@@ -9,8 +9,8 @@ from src.config import VALID_ROLES
 from src.secure_retriever import SecureRetriever
 
 st.set_page_config(
-    page_title="RAG Secure Retrieval & RBAC — Buổi 15",
-    page_icon="🛡️",
+    page_title="Hệ Thống RAG & Đánh Giá Ragas — Buổi 16",
+    page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -26,10 +26,10 @@ st.markdown("""
     
     .main-header {
         background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #312e81 70%, #4338ca 100%);
-        padding: 2.2rem 2rem;
+        padding: 2rem 2rem;
         border-radius: 16px;
         color: white;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         box-shadow: 0 10px 25px -5px rgba(67, 56, 202, 0.3);
         border: 1px solid #4338ca;
     }
@@ -48,6 +48,26 @@ st.markdown("""
         margin-bottom: 0;
     }
 
+    .metric-card {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 1.25rem;
+        text-align: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    .metric-value {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #4338ca;
+    }
+    .metric-label {
+        font-size: 0.88rem;
+        color: #64748b;
+        font-weight: 600;
+        margin-top: 0.2rem;
+    }
+
     .result-card {
         background-color: #ffffff;
         border: 1px solid #e2e8f0;
@@ -56,212 +76,249 @@ st.markdown("""
         border-radius: 12px;
         margin-bottom: 1rem;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
-    .result-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    }
-
     .citation-badge {
-        display: inline-block;
-        background-color: #eff6ff;
-        color: #1d4ed8;
+        background-color: #e0e7ff;
+        color: #3730a3;
         font-weight: 600;
-        font-size: 0.85rem;
-        padding: 0.25rem 0.75rem;
-        border-radius: 9999px;
-        border: 1px solid #bfdbfe;
-        margin-bottom: 0.75rem;
-    }
-
-    .role-badge {
-        display: inline-block;
-        background-color: #fef2f2;
-        color: #991b1b;
-        font-weight: 700;
-        font-size: 0.8rem;
+        font-size: 0.82rem;
         padding: 0.2rem 0.6rem;
         border-radius: 6px;
-        border: 1px solid #fecaca;
-        margin-left: 0.5rem;
     }
-
-    .score-badge {
-        display: inline-block;
-        background-color: #f0fdf4;
-        color: #15803d;
-        font-weight: 700;
-        font-size: 0.85rem;
-        padding: 0.25rem 0.75rem;
-        border-radius: 9999px;
-        border: 1px solid #bbf7d0;
-        margin-left: 0.5rem;
-    }
-
-    .security-alert-box {
-        background-color: #fffbebf5;
-        border: 1px solid #fcd34d;
+    .role-badge {
+        background-color: #fef3c7;
         color: #92400e;
-        padding: 1rem 1.25rem;
-        border-radius: 10px;
         font-weight: 600;
-        margin-bottom: 1.5rem;
+        font-size: 0.82rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
+        margin-left: 0.5rem;
     }
-
+    .score-badge {
+        background-color: #dcfce7;
+        color: #166534;
+        font-weight: 600;
+        font-size: 0.82rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
+        margin-left: 0.5rem;
+    }
+    .security-alert-box {
+        background-color: #eff6ff;
+        border: 1px solid #bfdbfe;
+        color: #1e40af;
+        padding: 0.8rem 1.2rem;
+        border-radius: 10px;
+        margin-bottom: 1.2rem;
+        font-size: 0.95rem;
+    }
     .graph-hint-box {
         background-color: #0f172a;
-        color: #38bdf8;
-        padding: 1.25rem;
-        border-radius: 12px;
+        color: #f8fafc;
+        padding: 1.2rem;
+        border-radius: 10px;
         font-family: monospace;
-        font-size: 0.9rem;
-        border: 1px solid #1e293b;
-        margin-top: 1.5rem;
+        font-size: 0.85rem;
+        border: 1px solid #334155;
     }
 </style>
 """, unsafe_allow_html=True)
 
-@st.cache_resource
-def load_secure_retriever():
-    return SecureRetriever()
-
-with st.spinner("Đang khởi tạo Secure Retrieval Pipeline (Pre-indexing & RBAC Rules)..."):
-    retriever = load_secure_retriever()
-
-# Header Banner
+# Main Banner Header
 st.markdown("""
 <div class="main-header">
-    <h1>🛡️ Secure RAG Retrieval & Role-Based Access Control (RBAC)</h1>
-    <p>Hệ thống RAG bảo mật lọc quyền truy cập trực tiếp ở tầng dữ liệu, Vector Metadata, Cypher Neo4j và Cross-Encoder Reranking</p>
+    <h1>🛡️ Hệ Thống Tra Cứu RAG An Toàn & Đánh Giá Tự Động Ragas (Buổi 16)</h1>
+    <p>Kiểm soát Truy cập dựa trên Vai trò (RBAC) & Tự động hóa Đánh giá Hiệu năng RAG bằng Ragas Framework</p>
 </div>
 """, unsafe_allow_html=True)
 
-# Sidebar Controls
-st.sidebar.header("🔐 Phân quyền & Tra cứu")
+# Load SecureRetriever
+@st.cache_resource
+def get_secure_retriever():
+    return SecureRetriever()
 
-user_roles_selected = st.sidebar.multiselect(
-    "👤 Vai trò của bạn (Your Roles):",
-    options=VALID_ROLES,
-    default=["Guest"],
-    help="Chọn một hoặc nhiều vai trò để đóng vai (impersonate) khi thực hiện tìm kiếm."
-)
+retriever = get_secure_retriever()
 
-if not user_roles_selected:
-    user_roles_selected = ["Guest"]
-    st.sidebar.warning("⚠️ Chưa chọn vai trò nào, tự động gán mặc định: Guest")
+# Tab Navigation
+tab_eval, tab_search = st.tabs(["📊 Đánh Giá Ragas (Buổi 16)", "🛡️ Tra Cứu RAG & RBAC (Buổi 15)"])
 
-st.sidebar.markdown("---")
-st.sidebar.header("🔍 Cấu hình Retrieval")
-
-query_input = st.sidebar.text_area(
-    "Nhập câu hỏi tra cứu:",
-    value="Theo Thông tư 01/2014/TT-NHNN việc vận chuyển tài sản quý được quy định như thế nào?",
-    height=110
-)
-
-method_option = st.sidebar.selectbox(
-    "Phương pháp Retrieval:",
-    options=["Hybrid + Rerank", "Hybrid (RRF)", "BM25 (Lexical)", "Dense (Embedding)"],
-    index=0
-)
-
-top_k = st.sidebar.slider("Top-k Kết quả:", min_value=1, max_value=15, value=5)
-candidate_k = st.sidebar.slider("Số lượng Ứng viên (Candidate-N):", min_value=5, max_value=30, value=20)
-
-search_button = st.sidebar.button("🚀 Tìm kiếm an toàn", type="primary", use_container_width=True)
-
-# Main Query Execution
-if search_button or query_input:
-    method_map = {
-        "BM25 (Lexical)": "bm25",
-        "Dense (Embedding)": "dense",
-        "Hybrid (RRF)": "hybrid",
-        "Hybrid + Rerank": "hybrid_rerank"
-    }
+# ==================== TAB 1: RAGAS EVALUATION ====================
+with tab_eval:
+    st.subheader("📈 Báo Cáo Hiệu Năng Hệ Thống RAG (Ragas Evaluation)")
     
-    selected_method_key = method_map[method_option]
-    
-    with st.spinner(f"Đang thực hiện retrieval an toàn cho vai trò {user_roles_selected}..."):
-        response = retriever.retrieve(
-            question=query_input,
-            user_roles=user_roles_selected,
-            method=selected_method_key,
-            top_k=top_k,
-            candidate_k=candidate_k
-        )
+    results_path = os.path.join("data", "eval", "evaluation_results.csv")
+    report_path = os.path.join("outputs", "ragas_evaluation_report.md")
+    qa_path = os.path.join("data", "eval", "qa_dataset.csv")
 
-    results = response['results']
-    accessible_count = response['accessible_chunks_count']
-    filtered_out_count = response['filtered_out_count']
+    if os.path.exists(results_path):
+        df_eval = pd.read_csv(results_path)
+        
+        prec = df_eval["context_precision"].mean()
+        rec = df_eval["context_recall"].mean()
+        faith = df_eval["faithfulness"].mean()
+        rel = df_eval["answer_relevancy"].mean()
+        overall = (prec + rec + faith + rel) / 4.0
 
-    # Security Alert / Filtering Notice
-    st.markdown(f"""
-    <div class="security-alert-box">
-        🔒 <b>Trạng thái phân quyền:</b> Bạn đang đóng vai <code>{user_roles_selected}</code> | 
-        Đã truy cập <b>{accessible_count}</b> / {response['total_chunks_in_corpus']} chunks | 
-        <span style="color: #b91c1c;">Đã lọc bỏ <b>{filtered_out_count}</b> chunks nhạy cảm không đủ quyền xem</span>.
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.subheader(f"📌 Kết quả Tra cứu ({method_option})")
-    if not results:
-        st.info("❌ Không tìm thấy kết quả nào phù hợp hoặc tất cả tài liệu liên quan đã bị ẩn do không đủ quyền truy cập.")
-    else:
-        st.write(f"Hiển thị **Top {len(results)}** kết quả được phép truy cập cho câu hỏi: *\"{query_input}\"*")
-
-        doc_ids = [r['document_id'] for r in results]
-        chunk_ids = [r['chunk_id'] for r in results]
-
-        col1, col2 = st.columns([2, 1])
-
+        col1, col2, col3, col4, col5 = st.columns(5)
         with col1:
-            for r in results:
-                allowed_str = ", ".join(r['allowed_roles']) if isinstance(r['allowed_roles'], list) else str(r['allowed_roles'])
-                st.markdown(f"""
-                <div class="result-card">
-                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                        <span class="citation-badge">📚 {r['citation']}</span>
-                        <div>
-                            <span class="role-badge">🔒 Quyền xem: [{allowed_str}]</span>
-                            <span class="score-badge">Rank #{r['rank']} | Score: {r['score']}</span>
+            st.markdown(f'<div class="metric-card"><div class="metric-value">{rec:.4f}</div><div class="metric-label">Context Recall</div></div>', unsafe_allow_html=True)
+        with col2:
+            st.markdown(f'<div class="metric-card"><div class="metric-value">{prec:.4f}</div><div class="metric-label">Context Precision</div></div>', unsafe_allow_html=True)
+        with col3:
+            st.markdown(f'<div class="metric-card"><div class="metric-value">{faith:.4f}</div><div class="metric-label">Faithfulness</div></div>', unsafe_allow_html=True)
+        with col4:
+            st.markdown(f'<div class="metric-card"><div class="metric-value">{rel:.4f}</div><div class="metric-label">Answer Relevancy</div></div>', unsafe_allow_html=True)
+        with col5:
+            st.markdown(f'<div class="metric-card" style="border: 2px solid #4338ca;"><div class="metric-value" style="color:#312e81;">{overall:.4f}</div><div class="metric-label">RAGAS OVERALL</div></div>', unsafe_allow_html=True)
+
+        st.markdown("<br/>", unsafe_allow_html=True)
+        
+        sub_t1, sub_t2, sub_t3 = st.tabs(["📄 Báo Cáo Markdown (Full Report)", "📋 Bảng Kết Quả Chi Tiết (20 Samples)", "🎯 Bộ Câu Hỏi Golden Dataset"])
+        
+        with sub_t1:
+            if os.path.exists(report_path):
+                with open(report_path, "r", encoding="utf-8") as f:
+                    report_content = f.read()
+                st.markdown(report_content)
+            else:
+                st.info("Chưa tìm thấy tệp ragas_evaluation_report.md.")
+                
+        with sub_t2:
+            st.dataframe(df_eval[["question_id", "usecase", "difficulty", "question", "answer", "context_precision", "context_recall", "faithfulness", "answer_relevancy"]], use_container_width=True)
+            
+        with sub_t3:
+            if os.path.exists(qa_path):
+                df_qa = pd.read_csv(qa_path)
+                st.dataframe(df_qa, use_container_width=True)
+    else:
+        st.warning("⚠️ Chưa tìm thấy tệp kết quả đánh giá evaluation_results.csv. Hãy chạy tập lệnh scripts/evaluate_rag_pipeline.py.")
+
+# ==================== TAB 2: SECURE RAG SEARCH ====================
+with tab_search:
+    st.sidebar.markdown("---")
+    st.sidebar.header("🔑 Phân quyền Vai trò (RBAC Role Selector)")
+    st.sidebar.markdown("Chọn vai trò đóng vai khi gửi truy vấn:")
+
+    user_roles_selected = []
+    for r in VALID_ROLES:
+        default_val = True if r in ["Staff", "Guest"] else False
+        if st.sidebar.checkbox(f"Role: {r}", value=default_val, key=f"role_{r}"):
+            user_roles_selected.append(r)
+
+    if not user_roles_selected:
+        user_roles_selected = ["Guest"]
+        st.sidebar.warning("⚠️ Chưa chọn vai trò nào, tự động gán mặc định: Guest")
+
+    st.sidebar.markdown("---")
+    st.sidebar.header("🔍 Cấu hình Retrieval")
+
+    query_input = st.sidebar.text_area(
+        "Nhập câu hỏi tra cứu:",
+        value="Theo Thông tư 01/2014/TT-NHNN việc vận chuyển tài sản quý được quy định như thế nào?",
+        height=110,
+        key="search_query"
+    )
+
+    method_option = st.sidebar.selectbox(
+        "Phương pháp Retrieval:",
+        options=["Hybrid + Rerank", "Hybrid (RRF)", "BM25 (Lexical)", "Dense (Embedding)"],
+        index=0,
+        key="search_method"
+    )
+
+    top_k = st.sidebar.slider("Top-k Kết quả:", min_value=1, max_value=15, value=5, key="top_k")
+    candidate_k = st.sidebar.slider("Số lượng Ứng viên (Candidate-N):", min_value=5, max_value=30, value=20, key="candidate_k")
+
+    search_button = st.sidebar.button("🚀 Tìm kiếm an toàn", type="primary", use_container_width=True)
+
+    if search_button or query_input:
+        method_map = {
+            "BM25 (Lexical)": "bm25",
+            "Dense (Embedding)": "dense",
+            "Hybrid (RRF)": "hybrid",
+            "Hybrid + Rerank": "hybrid_rerank"
+        }
+        
+        selected_method_key = method_map[method_option]
+        
+        with st.spinner(f"Đang thực hiện retrieval an toàn cho vai trò {user_roles_selected}..."):
+            response = retriever.retrieve(
+                question=query_input,
+                user_roles=user_roles_selected,
+                method=selected_method_key,
+                top_k=top_k,
+                candidate_k=candidate_k
+            )
+
+        results = response['results']
+        accessible_count = response['accessible_chunks_count']
+        filtered_out_count = response['filtered_out_count']
+
+        st.markdown(f"""
+        <div class="security-alert-box">
+            🔒 <b>Trạng thái phân quyền:</b> Bạn đang đóng vai <code>{user_roles_selected}</code> | 
+            Đã truy cập <b>{accessible_count}</b> / {response['total_chunks_in_corpus']} chunks | 
+            <span style="color: #b91c1c;">Đã lọc bỏ <b>{filtered_out_count}</b> chunks nhạy cảm không đủ quyền xem</span>.
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.subheader(f"📌 Kết quả Tra cứu ({method_option})")
+        if not results:
+            st.info("❌ Không tìm thấy kết quả nào phù hợp hoặc tất cả tài liệu liên quan đã bị ẩn do không đủ quyền truy cập.")
+        else:
+            st.write(f"Hiển thị **Top {len(results)}** kết quả được phép truy cập cho câu hỏi: *\"{query_input}\"*")
+
+            doc_ids = [r['document_id'] for r in results]
+            chunk_ids = [r['chunk_id'] for r in results]
+
+            col1, col2 = st.columns([2, 1])
+
+            with col1:
+                for r in results:
+                    allowed_str = ", ".join(r['allowed_roles']) if isinstance(r['allowed_roles'], list) else str(r['allowed_roles'])
+                    st.markdown(f"""
+                    <div class="result-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+                            <span class="citation-badge">📚 {r['citation']}</span>
+                            <div>
+                                <span class="role-badge">🔒 Quyền xem: [{allowed_str}]</span>
+                                <span class="score-badge">Rank #{r['rank']} | Score: {r['score']}</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: 0.75rem; color: #334155; line-height: 1.6;">
+                            {r['text']}
+                        </div>
+                        <div style="margin-top: 0.75rem; font-size: 0.8rem; color: #64748b;">
+                            Chunk ID: <code>{r['chunk_id']}</code> | Document ID: <code>{r['document_id']}</code> | Method: <b>{r['retrieval_method']}</b>
                         </div>
                     </div>
-                    <div style="margin-top: 0.75rem; color: #334155; line-height: 1.6;">
-                        {r['text']}
-                    </div>
-                    <div style="margin-top: 0.75rem; font-size: 0.8rem; color: #64748b;">
-                        Chunk ID: <code>{r['chunk_id']}</code> | Document ID: <code>{r['document_id']}</code> | Method: <b>{r['retrieval_method']}</b>
-                    </div>
+                    """, unsafe_allow_html=True)
+
+            with col2:
+                st.subheader("📊 Metrics & Security")
+                table_data = []
+                for r in results:
+                    table_data.append({
+                        "Rank": r['rank'],
+                        "Chunk ID": r['chunk_id'],
+                        "Score": r['score'],
+                        "Allowed Roles": ", ".join(r['allowed_roles']) if isinstance(r['allowed_roles'], list) else str(r['allowed_roles'])
+                    })
+                st.dataframe(pd.DataFrame(table_data), use_container_width=True)
+
+                st.subheader("🕸️ Secure Graph Hints (Neo4j)")
+                hints = retriever.get_graph_hints(doc_ids, chunk_ids, user_roles=user_roles_selected)
+                
+                st.markdown(f"""
+                <div class="graph-hint-box">
+                    <b>Neo4j Status:</b> <span style="color: {'#4ade80' if hints['status'] == 'CONNECTED' else '#f87171'}">{hints['status']}</span><br/>
+                    <b>Active User Roles:</b> <code>{hints['user_roles']}</code><br/><br/>
+                    <b>Retrieved Documents:</b><br/>
+                    <code>{hints['document_ids']}</code><br/><br/>
+                    <b>Direct Graph Relations (Role-Filtered):</b><br/>
+                    {"<br/>".join(["• " + rel for rel in hints['relations']]) if hints['relations'] else "Không có quan hệ hoặc bị giới hạn bởi quyền truy cập."}
                 </div>
                 """, unsafe_allow_html=True)
 
-        with col2:
-            st.subheader("📊 Metrics & Security")
-            table_data = []
-            for r in results:
-                table_data.append({
-                    "Rank": r['rank'],
-                    "Chunk ID": r['chunk_id'],
-                    "Score": r['score'],
-                    "Allowed Roles": ", ".join(r['allowed_roles']) if isinstance(r['allowed_roles'], list) else str(r['allowed_roles'])
-                })
-            st.dataframe(pd.DataFrame(table_data), use_container_width=True)
-
-            st.subheader("🕸️ Secure Graph Hints (Neo4j)")
-            hints = retriever.get_graph_hints(doc_ids, chunk_ids, user_roles=user_roles_selected)
-            
-            st.markdown(f"""
-            <div class="graph-hint-box">
-                <b>Neo4j Status:</b> <span style="color: {'#4ade80' if hints['status'] == 'CONNECTED' else '#f87171'}">{hints['status']}</span><br/>
-                <b>Active User Roles:</b> <code>{hints['user_roles']}</code><br/><br/>
-                <b>Retrieved Documents:</b><br/>
-                <code>{hints['document_ids']}</code><br/><br/>
-                <b>Direct Graph Relations (Role-Filtered):</b><br/>
-                {"<br/>".join(["• " + rel for rel in hints['relations']]) if hints['relations'] else "Không có quan hệ hoặc bị giới hạn bởi quyền truy cập."}
-            </div>
-            """, unsafe_allow_html=True)
-
 st.markdown("---")
-st.caption("AI Coding Agent — Buổi 15 RAG Advanced Security & RBAC | Data-Level & Retrieval Pipeline Security")
+st.caption("AI Coding Agent — Buổi 16 RAG Evaluation bằng Ragas & Buổi 15 RBAC Secure Retrieval Pipeline")
