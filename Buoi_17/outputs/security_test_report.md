@@ -13,9 +13,7 @@
 | `TEST_07` | Citation Format & Integrity | `PASS` | Valid citations returned: ['Thông tư số 01/2014/TT-NHNN Quy định về giao nhận, bảo quản, vận chuyển tiền mặt, tài sản quý, giấy tờ có giá | 01/2014/TT-NHNN | Điều 47. Quy trình vận chuyển | doc_44209_điều_47__quy_trình_vận_chuyển_47'] |
 | `TEST_08` | Compliance Gap Evidence Alignment | `PASS` | Dual evidence verified with classification 'DAP_UNG' |
 | `TEST_09` | Human-in-the-Loop Review Guardrail | `PASS` | review_status strictly tagged as NEEDS_HUMAN_REVIEW |
-| `TEST_10` | Neo4j Graceful Fallback Handling | `PASS` | Neo4j status handled gracefully: UNAVAILABLE (Couldn't connect to localhost:7687 (resolved to ('127.0.0.1:7687', '[::1]:7687')):
-Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)
-Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)) |
+| `TEST_10` | Neo4j Graceful Fallback Handling | `PASS` | Neo4j status handled gracefully: CONNECTED |
 
 ---
 SECURITY TESTS: PASS

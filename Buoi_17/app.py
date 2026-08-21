@@ -76,7 +76,7 @@ gap_sys = get_gap_system()
 
 # Sidebar Setup
 st.sidebar.title("🔐 Phân quyền & Cấu hình")
-user_id_demo = st.sidebar.text_input("User ID Demo", value="usr_demo_01")
+user_id_demo = st.sidebar.text_input("User ID", value="usr_trai_01")
 user_role = st.sidebar.selectbox(
     "Vai trò người dùng (User Role)",
     options=["Admin", "Risk_Manager", "HR", "Staff", "Guest"],
@@ -93,7 +93,7 @@ st.sidebar.info("Module 3 RAG Security & Compliance — Buổi 17")
 # Page Header
 st.markdown('<div class="main-header">🏦 AGRIBANK SECURE RAG & AI COMPLIANCE GAP CHECKER</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-header">Hệ thống tra cứu quy định nội bộ có phân quyền RBAC, Audit Trail và AI Compliance Gap Analysis</div>', unsafe_allow_html=True)
-st.markdown('<div class="warning-banner">⚠️ <b>Lưu ý quan trọng:</b> Demo đào tạo — kết quả AI cần kiểm toán viên xác minh trước khi sử dụng chính thức. Mọi Gap Analysis đều mang trạng thái <code>NEEDS_HUMAN_REVIEW</code>.</div>', unsafe_allow_html=True)
+
 
 # Main Navigation Tabs
 tab1, tab2, tab3 = st.tabs(["🔍 TRA CỨU QUY ĐỊNH NỘI BỘ", "⚖️ COMPLIANCE GAP CHECKER", "📜 AUDIT TRAIL LOGS"])
