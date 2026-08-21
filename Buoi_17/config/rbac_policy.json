@@ -1,0 +1,26 @@
+{
+  "roles": {
+    "Admin": {
+      "description": "Quản trị viên hệ thống - Toàn quyền truy cập mọi tài liệu",
+      "level": 1
+    },
+    "Risk_Manager": {
+      "description": "Quản lý rủi ro và tuân thủ - Truy cập quy định rủi ro, vốn, ngoại tệ, an toàn kho tiền",
+      "level": 2
+    },
+    "HR": {
+      "description": "Quản lý nhân sự - Truy cập quy định nhân sự, bổ nhiệm, đào tạo",
+      "level": 2
+    },
+    "Staff": {
+      "description": "Cán bộ nhân viên - Truy cập quy trình nghiệp vụ phổ thông, cho vay, kho tiền, mạng lưới",
+      "level": 3
+    },
+    "Guest": {
+      "description": "Khách / Độc giả công khai - Chỉ truy cập các văn bản công khai",
+      "level": 4
+    }
+  },
+  "default_policy": "DENY",
+  "unknown_role_handling": "DENY"
+}

@@ -18,12 +18,16 @@ from src.citation import format_citation
 class SecureRetriever:
     def __init__(self):
         base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-        corpus_path = os.path.join(base_dir, "data", "processed", "chunks_secure.csv")
-        
-        if not os.path.exists(corpus_path):
-            corpus_path = os.path.join(base_dir, "data", "processed", "chunks_normalized.csv")
+        env_corpus = os.getenv("SOURCE_SECURE_CSV", "")
+        if env_corpus and os.path.exists(env_corpus):
+            corpus_path = env_corpus
+        else:
+            corpus_path = os.path.join(base_dir, "data", "processed", "chunks_secure.csv")
+            if not os.path.exists(corpus_path):
+                corpus_path = os.path.join(base_dir, "data", "processed", "chunks_normalized.csv")
 
         self.full_df = pd.read_csv(corpus_path)
+
         
         # Ensure allowed_roles column exists as parsed Python lists
         if 'allowed_roles' not in self.full_df.columns:
